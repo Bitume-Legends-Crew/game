@@ -1,6 +1,6 @@
 <h1><img src="Assets/Logos/favicon-32.png"> Bitume Legends</h1>
 <h2> Welcome on Bitume Legends !</h2>
-<h3><s href="https://www.instagram.com/bitumelegends/"> Follow us on Instagram !</a></h3>
+<h3><a href="https://www.instagram.com/bitumelegends/"> Follow us on Instagram !</a></h3>
 <p>
     Name of the group : <b>Bitume Legends</b><br>
     Member of this project :
