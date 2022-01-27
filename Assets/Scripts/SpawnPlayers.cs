@@ -24,4 +24,9 @@ public class SpawnPlayers : MonoBehaviour {
     {
         
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
