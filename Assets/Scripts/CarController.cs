@@ -8,37 +8,98 @@ using Unity.VisualScripting;
 using UnityEngine.UI;
 
 public class CarController : MonoBehaviour {
-    //public float speed;
-    //private Rigidbody rb;
-
-    private float horizontalInput;
-    private float verticalInput;
-    private bool isBreaking;
-    private float steerAngle; 
-
-    [SerializeField] private float motorForce;
-    [SerializeField] private float brakeForce;
-    [SerializeField] private float maxSteerAngle;
+    // Version 1.0
+    // //public float speed;
+    // //private Rigidbody rb;
     //
-    // // private bool run;
-    // // [SerializeField] private Text speedText;
-    [SerializeField] private WheelCollider frontLeftWheelCollider;
-    [SerializeField] private WheelCollider frontRightWheelCollider;
-    [SerializeField] private WheelCollider rearLeftWheelCollider;
-    [SerializeField] private WheelCollider rearRightWheelCollider;
-    
-    [SerializeField] private Transform frontLeftWheelTransform;
-    [SerializeField] private Transform frontRightWheelTransform;
-    [SerializeField] private Transform rearLeftWheelTransform;
-    [SerializeField] private Transform rearRightWheelTransform;
+    // private float horizontalInput;
+    // private float verticalInput;
+    // private bool isBreaking;
+    // private float steerAngle; 
+    //
+    // [SerializeField] private float motorForce;
+    // [SerializeField] private float brakeForce;
+    // [SerializeField] private float maxSteerAngle;
 
+    
+    // Version 2.0
+    // public WheelCollider frontLeftWheelCollider;
+    // public WheelCollider frontRightWheelCollider;
+    // public WheelCollider rearLeftWheelCollider;
+    // public WheelCollider rearRightWheelCollider;
+    //
+    // public Transform frontLeftWheelTransform;
+    // public Transform frontRightWheelTransform;
+    // public Transform rearLeftWheelTransform;
+    // public Transform rearRightWheelTransform;
+
+    public Transform centerOfMass;
+    public float motorTorque = 1200f;
+    public float maxSteer = 20f;
+
+    public float Steer { get; set; }
+    public float Throttle { get; set; }
+
+    private Rigidbody _rigidbody;
+    private WheelController[] wheels;
     PhotonView view;
 
     private void Start()
     {
         view = GetComponent<PhotonView>();
+        wheels = GetComponentsInChildren<WheelController>();
+        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody.centerOfMass = centerOfMass.localPosition;
     }
 
+    void Update()
+    {
+        if (view.IsMine)
+        {
+            Steer = GameManagerScript.Instance.InputController.SteerInput;
+            Throttle = GameManagerScript.Instance.InputController.ThrottleInput;
+            foreach (var wheel in wheels) 
+            {
+                wheel.SteerAngle = Steer * maxSteer; 
+                wheel.Torque = Throttle * motorTorque;
+            }
+        }
+        
+    }
+
+    // Version 2.0
+    // void FixedUpdate()
+    // {
+    //     rearLeftWheelCollider.motorTorque = Input.GetAxis("Vertical") * motorTorque;
+    //     rearRightWheelCollider.motorTorque = Input.GetAxis("Vertical") * motorTorque;
+    //     frontLeftWheelCollider.steerAngle = Input.GetAxis("Horizontal") * maxSteer;
+    //     frontRightWheelCollider.steerAngle = Input.GetAxis("Horizontal") * maxSteer;
+    // }
+    //
+    // void Update()
+    // {
+    //     var pos = Vector3.zero;
+    //     var rot = Quaternion.identity;
+    //     
+    //     frontLeftWheelCollider.GetWorldPose(out pos, out rot);
+    //     frontLeftWheelTransform.position = pos;
+    //     frontLeftWheelTransform.rotation = rot;
+    //
+    //     frontRightWheelCollider.GetWorldPose(out pos, out rot);
+    //     frontRightWheelTransform.position = pos;
+    //     frontRightWheelTransform.rotation = rot;
+    //
+    //     rearLeftWheelCollider.GetWorldPose(out pos, out rot);
+    //     rearLeftWheelTransform.position = pos;
+    //     rearLeftWheelTransform.rotation = rot;
+    //
+    //     rearRightWheelCollider.GetWorldPose(out pos, out rot);
+    //     rearRightWheelTransform.position = pos;
+    //     rearRightWheelTransform.rotation = rot;
+    // }
+
+    
+    // Versions 0.1 and 1.0
     // Start is called before the first frame update
     // private void Start() {
     //     rb = GetComponent<Rigidbody>();
@@ -58,57 +119,57 @@ public class CarController : MonoBehaviour {
     //     }
     // }
 
-    private void FixedUpdate()
-    {
-        if (view.IsMine)
-        {
-            GetInput();
-            HandleMotor();
-            HandleSteering();
-            UpdateWheels();
-        }
-    }
-
-    private void GetInput()
-    {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-        isBreaking = Input.GetKey(KeyCode.Space);
-    }
-
-    private void HandleSteering()
-    {
-        steerAngle = maxSteerAngle * horizontalInput;
-        frontLeftWheelCollider.steerAngle = steerAngle;
-        frontRightWheelCollider.steerAngle = steerAngle;
-    }
-
-    private void HandleMotor()
-    {
-        frontLeftWheelCollider.motorTorque = verticalInput * motorForce * 10;
-        frontRightWheelCollider.motorTorque = verticalInput * motorForce * 10;
-        
-        brakeForce = isBreaking ? 3000f : 0f;
-        frontLeftWheelCollider.brakeTorque = brakeForce;
-        frontRightWheelCollider.brakeTorque = brakeForce;
-        rearLeftWheelCollider.brakeTorque = brakeForce;
-        rearRightWheelCollider.brakeTorque = brakeForce;
-    }
-
-    private void UpdateWheels()
-    {
-        UpdateSingleWheel(frontLeftWheelCollider, frontLeftWheelTransform);
-        UpdateSingleWheel(frontRightWheelCollider, frontRightWheelTransform);
-        UpdateSingleWheel(rearLeftWheelCollider, rearLeftWheelTransform);
-        UpdateSingleWheel(rearRightWheelCollider, rearRightWheelTransform);
-    }
-
-    private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
-    {
-        Vector3 pos;
-        Quaternion rot;
-        wheelCollider.GetWorldPose(out pos, out rot);
-        wheelTransform.rotation = rot;
-        wheelTransform.position = pos;
-    }
+    // private void FixedUpdate()
+    // {
+    //     if (view.IsMine)
+    //     {
+    //         GetInput();
+    //         HandleMotor();
+    //         HandleSteering();
+    //         UpdateWheels();
+    //     }
+    // }
+    //
+    // private void GetInput()
+    // {
+    //     horizontalInput = Input.GetAxis("Horizontal");
+    //     verticalInput = Input.GetAxis("Vertical");
+    //     isBreaking = Input.GetKey(KeyCode.Space);
+    // }
+    //
+    // private void HandleSteering()
+    // {
+    //     steerAngle = maxSteerAngle * horizontalInput;
+    //     frontLeftWheelCollider.steerAngle = steerAngle;
+    //     frontRightWheelCollider.steerAngle = steerAngle;
+    // }
+    //
+    // private void HandleMotor()
+    // {
+    //     frontLeftWheelCollider.motorTorque = verticalInput * motorForce * 10;
+    //     frontRightWheelCollider.motorTorque = verticalInput * motorForce * 10;
+    //     
+    //     brakeForce = isBreaking ? 3000f : 0f;
+    //     frontLeftWheelCollider.brakeTorque = brakeForce;
+    //     frontRightWheelCollider.brakeTorque = brakeForce;
+    //     rearLeftWheelCollider.brakeTorque = brakeForce;
+    //     rearRightWheelCollider.brakeTorque = brakeForce;
+    // }
+    //
+    // private void UpdateWheels()
+    // {
+    //     UpdateSingleWheel(frontLeftWheelCollider, frontLeftWheelTransform);
+    //     UpdateSingleWheel(frontRightWheelCollider, frontRightWheelTransform);
+    //     UpdateSingleWheel(rearLeftWheelCollider, rearLeftWheelTransform);
+    //     UpdateSingleWheel(rearRightWheelCollider, rearRightWheelTransform);
+    // }
+    //
+    // private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
+    // {
+    //     Vector3 pos;
+    //     Quaternion rot;
+    //     wheelCollider.GetWorldPose(out pos, out rot);
+    //     wheelTransform.rotation = rot;
+    //     wheelTransform.position = pos;
+    // }
 }
