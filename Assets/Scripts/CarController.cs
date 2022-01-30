@@ -42,11 +42,11 @@ public class CarController : MonoBehaviour {
 
     private Rigidbody _rigidbody;
     private WheelController[] wheels;
-    //PhotonView view;
+    PhotonView view;
 
     private void Start()
     {
-        //view = GetComponent<PhotonView>();
+        view = GetComponent<PhotonView>();
         wheels = GetComponentsInChildren<WheelController>();
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.centerOfMass = centerOfMass.localPosition;
@@ -54,14 +54,17 @@ public class CarController : MonoBehaviour {
 
     void Update()
     {
-        Steer = GameManagerScript.Instance.InputController.SteerInput;
-        Throttle = GameManagerScript.Instance.InputController.ThrottleInput;
-        
-        foreach (var wheel in wheels)
+        if (view.IsMine)
         {
-            wheel.SteerAngle = Steer * maxSteer;
-            wheel.Torque = Throttle * motorTorque;
+            Steer = GameManagerScript.Instance.InputController.SteerInput;
+            Throttle = GameManagerScript.Instance.InputController.ThrottleInput;
+            foreach (var wheel in wheels) 
+            {
+                wheel.SteerAngle = Steer * maxSteer; 
+                wheel.Torque = Throttle * motorTorque;
+            }
         }
+        
     }
 
     // Version 2.0
