@@ -44,14 +44,13 @@ public class CameraFollow : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetPosition, translateSpeed * Time.deltaTime);
     }
 
-    // void Update()
-    // {
-    //     // if (_view.IsMine)
-    //     // {
-    //         if (Target == null)
-    //             return;
-    //         
-    //         transform.position = Vector3.Lerp(transform.position, Target.position + offset, damper * Time.time);
-    //     // }
-    // }
+    //void Update()
+    //{
+    //    if (_view.IsMine)
+    //    {
+    //       if (Target == null)
+    //          return;
+    //       transform.position = Vector3.Lerp(transform.position, Target.position + offset, damper * Time.time);
+    //    }
+    //}
 }
