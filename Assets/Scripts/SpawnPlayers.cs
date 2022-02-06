@@ -19,9 +19,9 @@ public class SpawnPlayers : MonoBehaviour {
         //RandomPosition position spawning
         Vector3 randomPosition = new Vector3(0, 0, -7); //Random.Range(minX, maxX), 0, Random.Range(minY, maxY));
         PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
-        Vector3 cameraPosition = new Vector3(randomPosition.x, (float) (randomPosition.y + 3.21),
-             (float) (randomPosition.z - 6));
-        PhotonNetwork.Instantiate(playerCamera.name, cameraPosition, Quaternion.identity);
+        // Vector3 cameraPosition = new Vector3(randomPosition.x, (float) (randomPosition.y + 3.21),
+        //      (randomPosition.z - 6));
+        // PhotonNetwork.Instantiate(playerCamera.name, cameraPosition, Quaternion.identity);
         // Debug.Log("SpawnPlayers.Start launched...");
     }
 
