@@ -8,6 +8,8 @@ using Unity.VisualScripting;
 using UnityEngine.UI;
 
 public class CarController : MonoBehaviour {
+    #region Former code
+
     // Version 1.0
     // //public float speed;
     // //private Rigidbody rb;
@@ -21,7 +23,7 @@ public class CarController : MonoBehaviour {
     // [SerializeField] private float brakeForce;
     // [SerializeField] private float maxSteerAngle;
 
-    
+
     // Version 2.0
     // public WheelCollider frontLeftWheelCollider;
     // public WheelCollider frontRightWheelCollider;
@@ -33,9 +35,13 @@ public class CarController : MonoBehaviour {
     // public Transform rearLeftWheelTransform;
     // public Transform rearRightWheelTransform;
 
+    #endregion
+
     public Transform centerOfMass;
     public float motorTorque = 1200f;
     public float maxSteer = 20f;
+    public string inputSteerAxis = "Horizontal";
+    public string inputThrottleAxis = "Vertical";
 
     public float Steer { get; set; }
     public float Throttle { get; set; }
@@ -44,7 +50,7 @@ public class CarController : MonoBehaviour {
     private WheelController[] wheels;
     PhotonView view;
 
-    private void Start()
+    private void Awake()
     {
         view = GetComponent<PhotonView>();
         wheels = GetComponentsInChildren<WheelController>();
@@ -52,20 +58,36 @@ public class CarController : MonoBehaviour {
         _rigidbody.centerOfMass = centerOfMass.localPosition;
     }
 
+    private void Start()
+    {
+        if (!view.IsMine)
+        {
+            Camera[] cameras = GetComponentsInChildren<Camera>();
+            foreach (var cam in cameras)
+            {
+                Destroy(cam.gameObject);
+            }
+            Destroy(_rigidbody);
+        }
+    }
+
     void Update()
     {
-        if (view.IsMine)
+        if (!view.IsMine)
+            return;
+        // Steer = GameManagerScript.Instance.InputController.SteerInput;
+        // Throttle = GameManagerScript.Instance.InputController.ThrottleInput;
+        // Possibly add the controls here
+        Steer = Input.GetAxis(inputSteerAxis);
+        Throttle = Input.GetAxis(inputThrottleAxis);
+        foreach (var wheel in wheels) 
         {
-            Steer = GameManagerScript.Instance.InputController.SteerInput;
-            Throttle = GameManagerScript.Instance.InputController.ThrottleInput;
-            foreach (var wheel in wheels) 
-            {
-                wheel.SteerAngle = Steer * maxSteer; 
-                wheel.Torque = Throttle * motorTorque;
-            }
+            wheel.SteerAngle = Steer * maxSteer; 
+            wheel.Torque = Throttle * motorTorque;
         }
-        
     }
+
+    #region Former code
 
     // Version 2.0
     // void FixedUpdate()
@@ -172,4 +194,6 @@ public class CarController : MonoBehaviour {
     //     wheelTransform.rotation = rot;
     //     wheelTransform.position = pos;
     // }
+
+    #endregion
 }
