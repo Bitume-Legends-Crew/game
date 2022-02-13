@@ -16,13 +16,14 @@ public class SpawnPlayers : MonoBehaviour {
     
     // Start is called before the first frame update
     void Start() {
-        //RandomPosition position spawning
-        Vector3 randomPosition = new Vector3(0, 0, -7); //Random.Range(minX, maxX), 0, Random.Range(minY, maxY));
-        PhotonNetwork.Instantiate(playerPrefab.name, randomPosition, Quaternion.identity);
-        // Vector3 cameraPosition = new Vector3(randomPosition.x, (float) (randomPosition.y + 3.21),
-        //      (randomPosition.z - 6));
-        // PhotonNetwork.Instantiate(playerCamera.name, cameraPosition, Quaternion.identity);
-        // Debug.Log("SpawnPlayers.Start launched...");
+        //position spawning
+        Vector3 spawnPosition = new Vector3(0, 0, -7); 
+        PhotonNetwork.Instantiate(playerPrefab.name, spawnPosition, Quaternion.identity);
+        
+
+        //Vector3 cameraPosition = new Vector3(spawnPosition.x, (float) (spawnPosition.y + 3.21),(spawnPosition.z - 6));
+        //PhotonNetwork.Instantiate(playerCamera.name, cameraPosition, Quaternion.identity);
+        //Debug.Log("SpawnPlayers.Start launched...");
     }
 
     // Update is called once per frame
