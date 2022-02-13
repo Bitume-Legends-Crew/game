@@ -70,7 +70,7 @@ public class CarController : MonoBehaviour {
             Destroy(_rigidbody);
         }
     }
-
+    
     void Update()
     {
         if (!view.IsMine)

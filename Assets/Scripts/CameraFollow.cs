@@ -13,8 +13,8 @@ public class CameraFollow : MonoBehaviour
     //public Vector3 eulerRotation;
     public float translateSpeed;
     public float rotationSpeed;
-
     PhotonView _view;
+    
     
     void Start()
     {
@@ -43,6 +43,10 @@ public class CameraFollow : MonoBehaviour
         var targetPosition = Target.TransformPoint(offset);
         transform.position = Vector3.Lerp(transform.position, targetPosition, translateSpeed * Time.deltaTime);
     }
+    
+    
+    
+    
 
     //void Update()
     //{
