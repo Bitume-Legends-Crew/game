@@ -20,7 +20,7 @@ public class MultiplayerMenuManager : MonoBehaviour
         {
             if (_menus[i].menuName == menuName)
             {
-                OpenMenu(_menus[i]);
+                _menus[i].Open();
             }
 
             else if (_menus[i].open && _menus[i].menuName != "Background")

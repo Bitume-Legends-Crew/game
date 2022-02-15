@@ -8,7 +8,7 @@ public class RoomListItem : MonoBehaviour
 {
     public Text text;
 
-    private RoomInfo info;
+    public RoomInfo info;
     public void SetUp(RoomInfo _info)
     {
         info = _info;

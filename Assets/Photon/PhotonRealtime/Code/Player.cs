@@ -53,6 +53,7 @@ namespace Photon.Realtime
         public int ActorNumber
         {
             get { return this.actorNumber; }
+            set => this.actorNumber = value;
         }
 
 

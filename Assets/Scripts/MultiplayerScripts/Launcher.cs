@@ -6,11 +6,12 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
     public static Launcher Instance;
-    
+
     public InputField createInput;
     public InputField joinInput;
     public Text errorText;
@@ -20,6 +21,9 @@ public class Launcher : MonoBehaviourPunCallbacks
     public Transform playerListContent;
     public GameObject roomListItemPrefab;
     public GameObject playerListItemPrefab;
+    public GameObject startGameButton;
+
+    private bool _submited = false;
 
     private void Awake()
     {
@@ -38,6 +42,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         // This function is called when the game is connected
         PhotonNetwork.JoinLobby();
         Debug.Log("Connected !!");
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     public override void OnJoinedLobby()
@@ -79,20 +84,37 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        // PhotonNetwork.LoadLevel("Scene1");
         MultiplayerMenuManager.Instance.OpenMenu("RoomMenu");
         roomNameText.text = PhotonNetwork.CurrentRoom.Name;
+
+        foreach (Transform child in playerListContent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (Player player in PhotonNetwork.PlayerList)
+        {
+            Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>()
+                .SetUp(player);
+        }
+
+        if (!_submited)
+        {
+            PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
+        }
+
+        startGameButton.SetActive(PhotonNetwork.IsMasterClient);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
-        errorText.text = "Room Creation Failed : " + message;
+        errorText.text = "Room Creation Failed :\n" + message;
         MultiplayerMenuManager.Instance.OpenMenu("ErrorMenu");
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
-        errorText.text = "Room Joining Failed : " + message;
+        errorText.text = "Room Joining Failed :\n" + message;
         MultiplayerMenuManager.Instance.OpenMenu("ErrorMenu");
     }
 
@@ -110,6 +132,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     public void NicknameSubmit()
     {
         PhotonNetwork.NickName = playerNickname.text;
+        _submited = true;
     }
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
@@ -121,7 +144,32 @@ public class Launcher : MonoBehaviourPunCallbacks
 
         foreach (var room in roomList)
         {
+            if (room.RemovedFromList)
+            {
+                continue;
+            }
+
             Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(room);
         }
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
+        int i = 0;
+        foreach (var pl in PhotonNetwork.PlayerList)
+        {
+            pl.ActorNumber = i ;
+        }
+    }
+
+    public void StartGame()
+    {
+        PhotonNetwork.LoadLevel("Scene1");
+    }
+
+    public override void OnMasterClientSwitched(Player newMasterClient)
+    {
+        startGameButton.SetActive(PhotonNetwork.IsMasterClient);
     }
 }
