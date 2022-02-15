@@ -47,4 +47,9 @@ public class MultiplayerMenuManager : MonoBehaviour
     {
         menu.Close();
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

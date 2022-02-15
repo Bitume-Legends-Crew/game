@@ -1,17 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
+    public static Launcher Instance;
+    
     public InputField createInput;
     public InputField joinInput;
     public Text errorText;
     public Text roomNameText;
     public InputField playerNickname;
+    public Transform roomListContent;
+    public Transform playerListContent;
+    public GameObject roomListItemPrefab;
+    public GameObject playerListItemPrefab;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
         // This function connect the game at the server
@@ -41,6 +55,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         {
             return;
         }
+
         PhotonNetwork.CreateRoom(createInput.text);
         MultiplayerMenuManager.Instance.OpenMenu("loading");
     }
@@ -51,7 +66,14 @@ public class Launcher : MonoBehaviourPunCallbacks
         {
             return;
         }
+
         PhotonNetwork.JoinRoom(joinInput.text);
+        MultiplayerMenuManager.Instance.OpenMenu("loading");
+    }
+
+    public void JoinRoom(RoomInfo info)
+    {
+        PhotonNetwork.JoinRoom(info.Name);
         MultiplayerMenuManager.Instance.OpenMenu("loading");
     }
 
@@ -66,7 +88,6 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         errorText.text = "Room Creation Failed : " + message;
         MultiplayerMenuManager.Instance.OpenMenu("ErrorMenu");
-        
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
@@ -89,5 +110,18 @@ public class Launcher : MonoBehaviourPunCallbacks
     public void NicknameSubmit()
     {
         PhotonNetwork.NickName = playerNickname.text;
+    }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        foreach (Transform trans in roomListContent)
+        {
+            Destroy(trans.gameObject);
+        }
+
+        foreach (var room in roomList)
+        {
+            Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(room);
+        }
     }
 }
