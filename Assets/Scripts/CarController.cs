@@ -26,7 +26,7 @@ public class CarController : MonoBehaviour
     {
         view = GetComponent<PhotonView>();
         wheels = GetComponentsInChildren<WheelController>();
-        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody = GetComponentInChildren<Rigidbody>();
         _rigidbody.centerOfMass = centerOfMass.localPosition;
     }
 

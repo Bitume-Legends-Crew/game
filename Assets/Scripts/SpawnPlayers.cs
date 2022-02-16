@@ -30,7 +30,15 @@ public class SpawnPlayers : MonoBehaviour {
 
     IEnumerator SpawnMyPlayer()
     {
-        PhotonNetwork.Instantiate(playerPrefab.name, spawnPositions[PhotonNetwork.LocalPlayer.ActorNumber].position, Quaternion.identity);
+        for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+        {
+            if (Equals(PhotonNetwork.PlayerList[i], PhotonNetwork.LocalPlayer))
+            {
+                PhotonNetwork.Instantiate(playerPrefab.name,
+                    spawnPositions[i].position, Quaternion.identity);
+            }
+        }
+        // PhotonNetwork.Instantiate(playerPrefab.name, spawnPositions[PhotonNetwork.LocalPlayer.ActorNumber].position, Quaternion.identity);
         yield return new WaitForSeconds(5);
     }
 
