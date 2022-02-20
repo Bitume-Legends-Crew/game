@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MultiplayerMenuManager : MonoBehaviour
 {
@@ -51,5 +53,11 @@ public class MultiplayerMenuManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+    
+    public void BackToMenu()
+    {
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene("Menu");
     }
 }
