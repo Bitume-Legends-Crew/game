@@ -33,4 +33,9 @@ public class MenuScript : MonoBehaviour
     {
         Application.Quit();
     }
+    
+    public void BugReport()
+    {
+        Application.OpenURL("https://docs.google.com/forms/d/e/1FAIpQLSdtMqQPdZ3fohHimmtKlI6b1E8ZpBkLsoX8qXae7XPpkvpLcQ/viewform?usp=pp_url");
+    }
 }
