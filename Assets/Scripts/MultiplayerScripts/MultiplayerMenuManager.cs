@@ -9,7 +9,7 @@ public class MultiplayerMenuManager : MonoBehaviour
 {
     public static MultiplayerMenuManager Instance;
 
-    [SerializeField] Loader[] _menus;
+    [SerializeField] Loader[] menus;
 
     private void Awake()
     {
@@ -18,27 +18,27 @@ public class MultiplayerMenuManager : MonoBehaviour
 
     public void OpenMenu(string menuName)
     {
-        for (int i = 0; i < _menus.Length; i++)
+        for (int i = 0; i < menus.Length; i++)
         {
-            if (_menus[i].menuName == menuName)
+            if (menus[i].menuName == menuName)
             {
-                _menus[i].Open();
+                menus[i].Open();
             }
 
-            else if (_menus[i].open && _menus[i].menuName != "Background")
+            else if (menus[i].open && menus[i].menuName != "Background")
             {
-                CloseMenu(_menus[i]);
+                CloseMenu(menus[i]);
             }
         }
     }
 
     public void OpenMenu(Loader menu)
     {
-        for (int i = 0; i < _menus.Length; i++)
+        for (int i = 0; i < menus.Length; i++)
         {
-            if (_menus[i].open && _menus[i].menuName != "Background")
+            if (menus[i].open && menus[i].menuName != "Background")
             {
-                CloseMenu(_menus[i]);
+                CloseMenu(menus[i]);
             }
         }
 

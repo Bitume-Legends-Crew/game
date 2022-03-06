@@ -22,6 +22,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     public GameObject roomListItemPrefab;
     public GameObject playerListItemPrefab;
     public GameObject startGameButton;
+    public GameObject noStartGameButton;
 
     private bool _submited = false;
 
@@ -48,7 +49,6 @@ public class Launcher : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         // This function is called to call the lobby scene (the page of connection)
-        // SceneManager.LoadScene("Lobby");
         MultiplayerMenuManager.Instance.OpenMenu("Background");
         MultiplayerMenuManager.Instance.OpenMenu("Main");
     }
@@ -104,6 +104,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         }
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+        noStartGameButton.SetActive(!PhotonNetwork.IsMasterClient);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)

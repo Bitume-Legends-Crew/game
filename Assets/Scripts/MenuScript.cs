@@ -19,7 +19,7 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene("Lobby");
     }
     
-    public void AgainstIA()
+    public void AgainstAI()
     {
         SceneManager.LoadScene(levelToLoad);
     }
