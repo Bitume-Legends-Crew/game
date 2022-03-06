@@ -743,6 +743,7 @@ GameObject:
   - component: {fileID: 178461042498600479}
   - component: {fileID: 178461042498600477}
   - component: {fileID: 1871468120460716224}
+  - component: {fileID: 9147320013426451336}
   m_Layer: 0
   m_Name: PlayerWCam
   m_TagString: Untagged
@@ -872,6 +873,22 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!54 &9147320013426451336
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178461042498600476}
+  serializedVersion: 2
+  m_Mass: 1000
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &178461042555444143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1065,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 178461042734198738}
-  - component: {fileID: 5523983332238110857}
   m_Layer: 10
   m_Name: Car
   m_TagString: Untagged
@@ -1073,22 +1089,6 @@ Transform:
   m_Father: {fileID: 178461042498600466}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &5523983332238110857
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178461042734198737}
-  serializedVersion: 2
-  m_Mass: 1000
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &178461042876986113
 GameObject:
   m_ObjectHideFlags: 0
