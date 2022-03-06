@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class MultiplayerMenuManager : MonoBehaviour
 {
     public static MultiplayerMenuManager Instance;
 
-    [SerializeField] Loader[] menus;
+    [SerializeField] Loader[] _menus;
 
     private void Awake()
     {
@@ -18,27 +19,27 @@ public class MultiplayerMenuManager : MonoBehaviour
 
     public void OpenMenu(string menuName)
     {
-        for (int i = 0; i < menus.Length; i++)
+        for (int i = 0; i < _menus.Length; i++)
         {
-            if (menus[i].menuName == menuName)
+            if (_menus[i].menuName == menuName)
             {
-                menus[i].Open();
+                _menus[i].Open();
             }
 
-            else if (menus[i].open && menus[i].menuName != "Background")
+            else if (_menus[i].open && _menus[i].menuName != "Background")
             {
-                CloseMenu(menus[i]);
+                CloseMenu(_menus[i]);
             }
         }
     }
 
     public void OpenMenu(Loader menu)
     {
-        for (int i = 0; i < menus.Length; i++)
+        for (int i = 0; i < _menus.Length; i++)
         {
-            if (menus[i].open && menus[i].menuName != "Background")
+            if (_menus[i].open && _menus[i].menuName != "Background")
             {
-                CloseMenu(menus[i]);
+                CloseMenu(_menus[i]);
             }
         }
 

@@ -12,10 +12,10 @@ public class SpawnPlayers : MonoBehaviour {
     // public List<bool> _isFree = new List<bool>();
 
 
-    public int minX;
-    public int maxX;
-    public int minY;
-    public int maxY;
+    // public int minX;
+    // public int maxX;
+    // public int minY;
+    // public int maxY;
     
     // Start is called before the first frame update
     void Start() {
@@ -30,7 +30,10 @@ public class SpawnPlayers : MonoBehaviour {
         //Vector3 cameraPosition = new Vector3(spawnPosition.x, (float) (spawnPosition.y + 3.21),(spawnPosition.z - 6));
         //PhotonNetwork.Instantiate(playerCamera.name, cameraPosition, Quaternion.identity);
         //Debug.Log("SpawnPlayers.Start launched...");
-        StartCoroutine(SpawnMyPlayer());
+        
+        // StartCoroutine(SpawnMyPlayer());
+        PhotonNetwork.Instantiate(playerPrefab.name, spawnPositions[PhotonNetwork.LocalPlayer.ActorNumber].position,
+            Quaternion.identity);
     }
 
     IEnumerator SpawnMyPlayer()

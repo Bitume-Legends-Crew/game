@@ -156,6 +156,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        Debug.LogFormat("OnPlayerEnteredRoom() {0}", newPlayer.NickName);
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
         int i = 0;
         foreach (var pl in PhotonNetwork.PlayerList)
@@ -172,5 +173,6 @@ public class Launcher : MonoBehaviourPunCallbacks
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+        noStartGameButton.SetActive(!PhotonNetwork.IsMasterClient);
     }
 }
