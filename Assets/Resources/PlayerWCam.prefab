@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 178461042498600479}
   - component: {fileID: 178461042498600477}
   - component: {fileID: 1871468120460716224}
-  - component: {fileID: 9147320013426451336}
+  - component: {fileID: 3917576206434811328}
   m_Layer: 0
   m_Name: PlayerWCam
   m_TagString: Untagged
@@ -804,9 +804,8 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 2
+  observableSearch: 0
   ObservedComponents:
-  - {fileID: 178461042498600479}
   - {fileID: 1871468120460716224}
   sceneViewId: 0
   InstantiationId: 0
@@ -873,7 +872,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!54 &9147320013426451336
+--- !u!54 &3917576206434811328
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

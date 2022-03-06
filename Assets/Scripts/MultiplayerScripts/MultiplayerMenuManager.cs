@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class MultiplayerMenuManager : MonoBehaviour
 {
