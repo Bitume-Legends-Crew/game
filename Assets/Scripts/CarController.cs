@@ -19,20 +19,20 @@ public class CarController : MonoBehaviour
     public float Throttle { get; set; }
 
     private Rigidbody _rigidbody;
-    private WheelController[] wheels;
-    PhotonView view;
+    private WheelController[] _wheels;
+    PhotonView _view;
 
     private void Awake()
     {
-        view = GetComponent<PhotonView>();
-        wheels = GetComponentsInChildren<WheelController>();
+        _view = GetComponent<PhotonView>();
+        _wheels = GetComponentsInChildren<WheelController>();
         _rigidbody = GetComponentInChildren<Rigidbody>();
         _rigidbody.centerOfMass = centerOfMass.localPosition;
     }
 
     private void Start()
     {
-        if (!view.IsMine)
+        if (!_view.IsMine)
         {
             Camera[] cameras = GetComponentsInChildren<Camera>();
             foreach (var cam in cameras)
@@ -46,13 +46,11 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
-        if (!view.IsMine)
+        if (!_view.IsMine)
             return;
-        // Steer = GameManagerScript.Instance.InputController.SteerInput;
-        // Throttle = GameManagerScript.Instance.InputController.ThrottleInput;
         Steer = Input.GetAxis(inputSteerAxis);
         Throttle = Input.GetAxis(inputThrottleAxis);
-        foreach (var wheel in wheels)
+        foreach (var wheel in _wheels)
         {
             wheel.SteerAngle = Steer * maxSteer;
             wheel.Torque = Throttle * motorTorque;

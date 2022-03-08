@@ -9,6 +9,7 @@ public class RoomListItem : MonoBehaviour
     public Text text;
 
     public RoomInfo info;
+
     public void SetUp(RoomInfo _info)
     {
         info = _info;
