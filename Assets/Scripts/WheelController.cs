@@ -8,7 +8,7 @@ public class WheelController : MonoBehaviour
     public bool steer;
     public bool invertSteer;
     public bool power;
-    
+
     public float SteerAngle { get; set; }
     public float Torque { get; set; }
 
@@ -20,7 +20,7 @@ public class WheelController : MonoBehaviour
         _wheelCollider = GetComponentInChildren<WheelCollider>();
         _wheelTransform = GetComponentInChildren<MeshRenderer>().GetComponent<Transform>();
     }
-    
+
     void Update()
     {
         _wheelCollider.GetWorldPose(out Vector3 pos, out Quaternion rot);

@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
-using UnityEngine.SceneManagement;
+using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -29,6 +26,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     private void Awake()
     {
         Instance = this;
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     void Start()
@@ -43,7 +41,12 @@ public class Launcher : MonoBehaviourPunCallbacks
         // This function is called when the game is connected
         PhotonNetwork.JoinLobby();
         Debug.Log("Connected !!");
-        PhotonNetwork.AutomaticallySyncScene = true;
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        Debug.LogWarningFormat("OnDisconnected() was called by PUN with reason {0}",
+            cause);
     }
 
     public override void OnJoinedLobby()
@@ -58,10 +61,11 @@ public class Launcher : MonoBehaviourPunCallbacks
         // Remove the if statement if you would create a room without name
         if (string.IsNullOrEmpty(createInput.text))
         {
+            Debug.LogWarning("Must assign a name to create room");
             return;
         }
 
-        PhotonNetwork.CreateRoom(createInput.text);
+        PhotonNetwork.CreateRoom(createInput.text.ToUpper());
         MultiplayerMenuManager.Instance.OpenMenu("loading");
     }
 
@@ -72,12 +76,13 @@ public class Launcher : MonoBehaviourPunCallbacks
             return;
         }
 
-        PhotonNetwork.JoinRoom(joinInput.text);
+        PhotonNetwork.JoinRoom(joinInput.text.ToUpper());
         MultiplayerMenuManager.Instance.OpenMenu("loading");
     }
 
     public void JoinRoom(RoomInfo info)
     {
+        // ToUpper ??
         PhotonNetwork.JoinRoom(info.Name);
         MultiplayerMenuManager.Instance.OpenMenu("loading");
     }
@@ -125,14 +130,14 @@ public class Launcher : MonoBehaviourPunCallbacks
         MultiplayerMenuManager.Instance.OpenMenu("loading");
     }
 
-    public override void OnLeftRoom()
-    {
-        MultiplayerMenuManager.Instance.OpenMenu("Main");
-    }
+    // public override void OnLeftRoom()
+    // {
+    //     MultiplayerMenuManager.Instance.OpenMenu("Main");
+    // }
 
     public void NicknameSubmit()
     {
-        PhotonNetwork.NickName = playerNickname.text;
+        PhotonNetwork.NickName = playerNickname.text.ToUpper();
         _submited = true;
     }
 
@@ -156,12 +161,12 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.LogFormat("OnPlayerEnteredRoom() {0}", newPlayer.NickName);
+        Debug.LogFormat("New Player on room : {0}", newPlayer.NickName);
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
         int i = 0;
         foreach (var pl in PhotonNetwork.PlayerList)
         {
-            pl.ActorNumber = i ;
+            pl.ActorNumber = i;
         }
     }
 

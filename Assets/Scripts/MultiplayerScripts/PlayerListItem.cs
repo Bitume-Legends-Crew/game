@@ -8,17 +8,17 @@ using UnityEngine.UI;
 public class PlayerListItem : MonoBehaviourPunCallbacks
 {
     public Text text;
-    Player player;
+    Player _player;
 
-    public void SetUp(Player _player)
+    public void SetUp(Player player)
     {
-        player = _player;
-        text.text = _player.NickName;
+        this._player = player;
+        text.text = player.NickName;
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
-        if (player == otherPlayer)
+        if (_player == otherPlayer)
         {
             Destroy(gameObject);
         }

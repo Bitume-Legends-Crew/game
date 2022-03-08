@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     public static RoomManager Instance;
-    
+
     private void Awake()
     {
         if (Instance)
@@ -36,9 +36,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         if (scene.buildIndex == 1) // We're in the game scene
         {
-            
         }
     }
-    
-    
 }
