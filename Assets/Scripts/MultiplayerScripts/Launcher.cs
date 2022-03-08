@@ -24,11 +24,10 @@ public class Launcher : MonoBehaviourPunCallbacks
     public GameObject startGameButton;
     public GameObject noStartGameButton;
 
-    private bool _submited = false;
-
     private void Awake()
     {
         Instance = this;
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     void Start()
@@ -43,7 +42,6 @@ public class Launcher : MonoBehaviourPunCallbacks
         // This function is called when the game is connected
         PhotonNetwork.JoinLobby();
         Debug.Log("Connected !!");
-        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     public override void OnJoinedLobby()
@@ -61,7 +59,7 @@ public class Launcher : MonoBehaviourPunCallbacks
             return;
         }
 
-        PhotonNetwork.CreateRoom(createInput.text);
+        PhotonNetwork.CreateRoom(createInput.text.ToUpper());
         MultiplayerMenuManager.Instance.OpenMenu("loading");
     }
 
@@ -72,7 +70,7 @@ public class Launcher : MonoBehaviourPunCallbacks
             return;
         }
 
-        PhotonNetwork.JoinRoom(joinInput.text);
+        PhotonNetwork.JoinRoom(joinInput.text.ToUpper());
         MultiplayerMenuManager.Instance.OpenMenu("loading");
     }
 
@@ -98,13 +96,22 @@ public class Launcher : MonoBehaviourPunCallbacks
                 .SetUp(player);
         }
 
-        if (!_submited)
+        bool isUpper = true;
+        foreach (char c in PhotonNetwork.NickName)
         {
-            PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
+            if (!Char.IsUpper(c))
+            {
+                isUpper = false;
+            }
         }
 
-        startGameButton.SetActive(PhotonNetwork.IsMasterClient);
-        noStartGameButton.SetActive(!PhotonNetwork.IsMasterClient);
+        if (!isUpper)
+        {
+            PhotonNetwork.NickName = "PLAYER" + Random.Range(0, 1000).ToString("0000");
+        }
+
+        startGameButton.SetActive(true); // PhotonNetwork.IsMasterClient);
+        noStartGameButton.SetActive(false); //!PhotonNetwork.IsMasterClient);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -132,8 +139,20 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public void NicknameSubmit()
     {
-        PhotonNetwork.NickName = playerNickname.text;
-        _submited = true;
+        PhotonNetwork.NickName = playerNickname.text.ToUpper();
+        bool isUpper = true;
+        foreach (char c in PhotonNetwork.NickName)
+        {
+            if (!Char.IsUpper(c))
+            {
+                isUpper = false;
+            }
+        }
+
+        if (!isUpper)
+        {
+            PhotonNetwork.NickName = "PLAYER" + Random.Range(0, 1000).ToString("0000");
+        }
     }
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
