@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35fad439-001c-4bcb-8de7-96a987381655" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/PolygonStreetRacer/Scenes/Demo_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonStreetRacer/Scenes/Demo_01.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.game-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.game-1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Vehicle/Control/Input/InputProviders/SteeringWheelInput.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Vehicle/Control/Input/InputProviders/SteeringWheelInput/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Vehicle/Control/Input/InputProviders/SteeringWheelInput/Readme.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Vehicle/Control/Input/InputProviders/SteeringWheelInput/SteeringWheelInput.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Prefabs/InstuctionsWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Prefabs/InstuctionsWindow.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +70,11 @@
       <workItem from="1647885715796" duration="1000" />
       <workItem from="1647885981435" duration="3000" />
       <workItem from="1647886006191" duration="21000" />
+      <workItem from="1648230978436" duration="1000" />
+      <workItem from="1648231160232" duration="1000" />
+      <workItem from="1648231173383" duration="1000" />
+      <workItem from="1648232176228" duration="4000" />
+      <workItem from="1648232355359" duration="2000" />
     </task>
     <servers />
   </component>
