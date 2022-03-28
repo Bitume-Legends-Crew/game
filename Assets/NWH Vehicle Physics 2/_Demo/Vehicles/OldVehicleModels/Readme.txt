@@ -1,1 +1,0 @@
-Vehicles in this directory are provided for backwards compatibility and will not be updated. Please use the current demo vehicles.
