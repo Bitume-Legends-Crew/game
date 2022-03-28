@@ -1,13 +1,345 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35fad439-001c-4bcb-8de7-96a987381655" name="Changes" comment="">
+    <list default="true" id="3a4fb716-365c-441e-a8ff-3f7b955392a1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.game-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.game-1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Vehicle/Control/Input/InputProviders/SteeringWheelInput.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Vehicle/Control/Input/InputProviders/SteeringWheelInput/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Vehicle/Control/Input/InputProviders/SteeringWheelInput/Readme.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Vehicle/Control/Input/InputProviders/SteeringWheelInput/SteeringWheelInput.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/.idea/.idea.Assets.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/.idea/.idea.Assets.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/.idea/.idea.Assets.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/.idea/.idea.Assets.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SoundTracks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SoundTracks/phonk1(voiceless).mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SoundTracks/phonk1(voiceless).mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SoundTracks/phonk_menu1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SoundTracks/phonk_menu1.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Logos/kisspng-software-bug-computer-icons-computer-virus-clip-ar-5b308b0b7272e4.4661126915299079794688.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Logos/kisspng-software-bug-computer-icons-computer-virus-clip-ar-5b308b0b7272e4.4661126915299079794688.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/NWH/Common/Demo/DragObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/NWH/Common/Demo/DragObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/Mirror.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/Mirror/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/Mirror/Editor/MirrorMultiplayerVehicleEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/Mirror/Editor/MirrorMultiplayerVehicleEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/Mirror/MirrorMultiplayerVehicle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/Mirror/MirrorMultiplayerVehicle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/PUN2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/PUN2/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/PUN2/Editor/PhotonMultiplayerVehicleEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/PUN2/Editor/PhotonMultiplayerVehicleEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/PUN2/PhotonMultiplayerVehicle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/Scripts/Multiplayer/PUN2/PhotonMultiplayerVehicle.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Prefabs/InstuctionsWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Prefabs/InstuctionsWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/EULA.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/EULA.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/EuroTrailer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/EuroTrailer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/EuroTruck.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/EuroTruck.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Prefabs/Sample Scene.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Prefabs/Sample Scene.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/SampleScene_TruckTrailer.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/SampleScene_TruckTrailer.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Script/GRCamRotate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Script/GRCamRotate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Shader/ProjectorMultiply.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Shader/ProjectorMultiply.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/Atlas_Industrial_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/Atlas_Industrial_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/Concrete03_d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/Concrete03_d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/TireMarks2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/TireMarks2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/asphalt_d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/asphalt_d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/tarmac_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Demo Scene/Texture/tarmac_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRLR_HD.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRLR_HD.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRLR_LD.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRLR_LD.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRLR_LOD1_Wheeltyres.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRLR_LOD1_Wheeltyres.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRLR_collider.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRLR_collider.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK_FPV.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK_FPV.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK_HD.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK_HD.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK_LOD1_Wheeltyres.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK_LOD1_Wheeltyres.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK_collider.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/010416TRUK_collider.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRLR-brakelights.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRLR-brakelights.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRLR-graphics.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRLR-graphics.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRLR-trailer.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRLR-trailer.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-bodycolor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-bodycolor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-brakelights.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-brakelights.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-diffuse.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-diffuse.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-glass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-glass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-interior.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-interior.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-mirror.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-mirror.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-reflective.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-reflective.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-texblack.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-texblack.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-trims.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-trims.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-wheelrims.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-wheelrims.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-wheeltyre.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-wheeltyre.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-windows.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-windows.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-windowsdark.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/010416TRUK-windowsdark.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/collider.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/collider.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/license plate.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Mesh/Materials/license plate.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRLR_graphics.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRLR_graphics.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRLR_trailer.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRLR_trailer.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRUK.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRUK.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRUK_bodycolor.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRUK_bodycolor.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRUK_interior.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/PSD Layered/010416TRUK_interior.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures Wheels.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures Wheels/wheelstyle_truck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures Wheels/wheelstyle_truck.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRLR_graphics .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRLR_graphics .png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRLR_trailer .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRLR_trailer .png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRUK .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRUK .png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRUK _bodycolor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRUK _bodycolor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRUK_interior .png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/010416TRUK_interior .png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/DetailTexture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/DetailTexture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/LicensePlate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/GR3D 010416TRUK/Textures/LicensePlate.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/Model by GR3D.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Euro Truck by GR3D/Model by GR3D.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Blinker 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Blinker 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Blinker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Blinker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/BrakeLight 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/BrakeLight 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/BrakeLight.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/BrakeLight.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Main 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Main 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Main.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Main.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Rim 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Rim 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Rim.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Rim.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Tire 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Tire 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Tire.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Materials/Tire.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/MilitaryTrailer.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/MilitaryTrailer.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Blinker_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Blinker_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Blinker_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Blinker_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Blinker_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Blinker_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_BrakeLight_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_BrakeLight_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_BrakeLight_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_BrakeLight_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_BrakeLight_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_BrakeLight_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Main_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Main_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Main_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Main_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Main_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Main_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Rim_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Rim_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Rim_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Rim_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Rim_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Rim_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Tire_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Tire_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Tire_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Tire_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Tire_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Trailer/Textures/MilitaryTrailer_Tire_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Blinker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Blinker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/BrakeLight.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/BrakeLight.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/BrakeLightTransparent.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/BrakeLightTransparent.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Glass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Glass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Headlight.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Headlight.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Main.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Main.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/MirrorL.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/MirrorL.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/MirrorR.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/MirrorR.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Rim.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Rim.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Tire.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Materials/Tire.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Military Truck 815-7.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Military Truck 815-7.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Blinker_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Blinker_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Blinker_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Blinker_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Blinker_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Blinker_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_BrakeLight_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_BrakeLight_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_BrakeLight_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_BrakeLight_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_BrakeLight_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_BrakeLight_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Glass_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Glass_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Glass_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Glass_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Glass_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Glass_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Headlight_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Headlight_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Headlight_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Headlight_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Headlight_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Headlight_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Main_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Main_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Main_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Main_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Main_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Main_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Rim_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Rim_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Rim_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Rim_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Rim_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Rim_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Tire_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Tire_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Tire_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Tire_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Tire_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck 815-7_Tire_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck Mirror L.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck Mirror L.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck Mirror R.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/Military Truck Mirror R.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/MonsterTruck_Tire_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/MonsterTruck_Tire_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/MonsterTruck_Tire_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/MonsterTruck_Tire_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/MonsterTruck_Tire_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/MonsterTruck_Tire_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/TestScene_Concrete_AlbedoTransparency.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/TestScene_Concrete_AlbedoTransparency.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/TestScene_Concrete_MetallicSmoothness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/TestScene_Concrete_MetallicSmoothness.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/TestScene_Concrete_Normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Military Truck 815-7/Textures/TestScene_Concrete_Normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/Readme.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Exterior.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Exterior.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Glass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Glass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Interior.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Interior.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Light.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Light.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Wheels.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Materials/Wheels.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/SUV.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/SUV.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Textures/Vehicle_SUV_D.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Textures/Vehicle_SUV_D.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Textures/Vehicle_SUV_Mech_D.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Textures/Vehicle_SUV_Mech_D.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Textures/Vehicle_SUV_Mech_N.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Textures/Vehicle_SUV_Mech_N.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Textures/Vehicle_SUV_N.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/_Demo/Vehicles/OldVehicleModels/SUV/Textures/Vehicle_SUV_N.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonStreetRacer.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonStreetRacer.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonStreetRacer/Scenes/Demo_01.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PolygonStreetRacer/Scenes/Demo_01.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonStreetRacer/Scenes/Demo_01Settings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PolygonStreetRacer/Scenes/Demo_01Settings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PlayerWCam.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PlayerWCam.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/.idea/.idea.Scripts.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/.idea/.idea.Scripts.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/.idea/.idea.Scripts.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/.idea/.idea.Scripts.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraWork.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraWork.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CarController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManagerScript.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiplayerScripts/Launcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiplayerScripts/Launcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoomManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoomManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnPlayers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WheelController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WheelController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +349,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="26hpWJW7IRD1NnsSRuU5j7VDprD" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/NWH Vehicle Physics 2/NWH/Common/Demo/DragObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraFollow1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CarController1.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="270QRdjVYvofHBCFUwjLUM5ty73" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,14 +367,6 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
-    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Build Game\Bitume Legends.exe" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\Victorien\Desktop\Build Game" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <method v="2" />
-    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -62,24 +391,32 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="35fad439-001c-4bcb-8de7-96a987381655" name="Changes" comment="" />
-      <created>1647885708090</created>
+      <changelist id="3a4fb716-365c-441e-a8ff-3f7b955392a1" name="Changes" comment="" />
+      <created>1648454522028</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1647885708090</updated>
-      <workItem from="1647885715796" duration="1000" />
-      <workItem from="1647885981435" duration="3000" />
-      <workItem from="1647886006191" duration="21000" />
-      <workItem from="1648230978436" duration="1000" />
-      <workItem from="1648231160232" duration="1000" />
-      <workItem from="1648231173383" duration="1000" />
-      <workItem from="1648232176228" duration="4000" />
-      <workItem from="1648232355359" duration="2000" />
+      <updated>1648454522028</updated>
+      <workItem from="1648454526697" duration="1796000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

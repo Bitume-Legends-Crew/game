@@ -44,7 +44,7 @@ namespace NWH.Common.Demo
 #elif ENABLE_LEGACY_INPUT_MANAGER
             mousePosition = Input.mousePosition;
             _mouseRay = _cam.ScreenPointToRay(mousePosition);
-            _draggingButtonWasPressed = Input.GetKeyDown(KeyCode.Mouse2);
+            _draggingButtonWasPressed = Input.GetKeyDown();
             _draggingButtonWasReleased = Input.GetKeyUp(KeyCode.Mouse2);
 #endif
 
