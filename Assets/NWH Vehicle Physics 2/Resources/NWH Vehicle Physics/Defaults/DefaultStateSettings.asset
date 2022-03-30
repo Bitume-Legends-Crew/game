@@ -26,42 +26,42 @@ MonoBehaviour:
   - fullName: NWH.VehiclePhysics2.Effects.EffectManager
     isEnabled: 1
     isOn: 1
-    lodIndex: 2
+    lodIndex: -1
     name: EffectManager
   - fullName: NWH.VehiclePhysics2.Effects.ExhaustFlash
     isEnabled: 1
     isOn: 1
-    lodIndex: 2
+    lodIndex: -1
     name: ExhaustFlash
   - fullName: NWH.VehiclePhysics2.Effects.ExhaustSmoke
     isEnabled: 1
     isOn: 1
-    lodIndex: 2
+    lodIndex: -1
     name: ExhaustSmoke
   - fullName: NWH.VehiclePhysics2.Effects.LightsMananger
     isEnabled: 1
     isOn: 1
-    lodIndex: 2
+    lodIndex: -1
     name: LightsMananger
   - fullName: NWH.VehiclePhysics2.Effects.SkidmarkManager
     isEnabled: 1
     isOn: 1
-    lodIndex: 2
+    lodIndex: -1
     name: SkidmarkManager
   - fullName: NWH.VehiclePhysics2.Effects.SurfaceParticleManager
     isEnabled: 1
     isOn: 1
-    lodIndex: 2
+    lodIndex: -1
     name: SurfaceParticleManager
   - fullName: NWH.VehiclePhysics2.GroundDetection.GroundDetection
     isEnabled: 1
     isOn: 1
-    lodIndex: 2
+    lodIndex: -1
     name: GroundDetection
   - fullName: NWH.VehiclePhysics2.Input.Input
     isEnabled: 1
     isOn: 1
-    lodIndex: 2
+    lodIndex: -1
     name: Input
   - fullName: NWH.VehiclePhysics2.Modules.ABS.ABSModule
     isEnabled: 0
