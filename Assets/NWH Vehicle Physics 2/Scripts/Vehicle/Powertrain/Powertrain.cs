@@ -22,7 +22,7 @@ namespace NWH.VehiclePhysics2.Powertrain
 
         private int _groundCheckFrameIndex = -999;
         private int _prevFrameCount = -999;
-        private bool _engineWasRunning;
+        private bool engineWasRunning;
 
         public bool HasWheelAir { get; private set; }
 
