@@ -5,13 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-
-    public string levelToLoad;
     public GameObject garage;
     
     public void Timer()
     {
-        SceneManager.LoadScene(levelToLoad);
+        SceneManager.LoadScene("levelToLoad");
     }
     
     public void Multiplayer()
@@ -19,9 +17,9 @@ public class MenuScript : MonoBehaviour
         SceneManager.LoadScene("Lobby");
     }
     
-    public void AgainstAI()
+    public void Soloplayer()
     {
-        SceneManager.LoadScene(levelToLoad);
+        SceneManager.LoadScene("Solo");
     }
     
     public void Garage()
