@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SoloMenu : MonoBehaviour
 {
+    private List<string> TrackList = new List<string>(){"City", "Port"}; // Track List
+    private int i = 0; // Index for list
+
     public void Back()
     {
         SceneManager.LoadScene("Menu");
@@ -26,13 +29,41 @@ public class SoloMenu : MonoBehaviour
         // Load Hard Difficulty with I.A.
     }
 
-    public void Track()
+    public void TrackSelectRight()
     {
-        // Selection of the Track with SetActive
+        i = (i + 1) % TrackList.Count;
+        if (TrackList[i % 2] == "City")
+        {
+            // SET ACTIVE IMAGE CITY
+            // SET INACTIVE IMAGE PORT
+        }
+        
+        if (TrackList[i % 2] == "Port")
+        {
+            // SET ACTIVE IMAGE PORT
+            // SET INACTIVE IMAGE CITY
+        }
     }
     
+    // TO BE REMOVED ??
+    public void TrackSelectLeft()
+    {
+        i = i - 1 % TrackList.Count;
+        if (TrackList[i % 2] == "City")
+        {
+            // SET ACTIVE IMAGE CITY
+            // SET INACTIVE IMAGE PORT
+        }
+        
+        if (TrackList[i % 2] == "Port")
+        {
+            // SET ACTIVE IMAGE PORT
+            // SET INACTIVE IMAGE CITY
+        }
+    }
+
     public void StarGame()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(TrackList[i]);
     }
 }
