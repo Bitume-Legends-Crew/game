@@ -9,7 +9,7 @@ public class MenuScript : MonoBehaviour
     
     public void Timer()
     {
-        SceneManager.LoadScene("levelToLoad");
+        SceneManager.LoadScene("Timer");
     }
     
     public void Multiplayer()
