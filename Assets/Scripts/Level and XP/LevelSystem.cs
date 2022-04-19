@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using Photon.Realtime;
 using UnityEngine;
 using TMPro;
 
@@ -7,12 +7,12 @@ public class LevelSystem : MonoBehaviour
 {
     public static LevelSystem instance;
 
-    public TextMeshProUGUI uiLevelText;
+    public static TextMeshProUGUI uiLevelText;
     
     // A peut être mettre en private ?
-    public int level = 0;
-    public int experience;
-    public int experienceToNextLevel;
+    public static int level = 0;
+    public static int experience;
+    public static int experienceToNextLevel;
 
     public void Awake()
     {
@@ -27,7 +27,7 @@ public class LevelSystem : MonoBehaviour
         SetLevel(1);
     }
 
-    public bool AddExperience(int experienceToAdd)
+    public static bool AddExperience(int experienceToAdd)
     {
         experience += experienceToAdd;
         
@@ -41,15 +41,15 @@ public class LevelSystem : MonoBehaviour
         return false;
     }
 
-    public void SetLevel(int value)
+    public static void SetLevel(int value)
     {
-        this.level = value;
+        level = value;
         experience = experience - experienceToNextLevel;
         experienceToNextLevel = (int)(50f * (Mathf.Pow(level + 1, 2) - (5 * (level + 1)) + 8));
         UpdateVisual();
     }
 
-    public void UpdateVisual()
+    public static void UpdateVisual()
     {
         uiLevelText.SetText(level.ToString("0") + "\nto next lvl: " + experienceToNextLevel + "\ncurrent exp: " + experience);
     }

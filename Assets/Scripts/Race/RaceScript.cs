@@ -1,21 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class RaceScript : MonoBehaviour
 {
-    string playerTag = "playerTagExemple"; // to recognize the player (via tag) 
-    int lapCounter; // to count laps
-    int maxNbOfLap; // set how many lap the player has to run before end
+    public static string playerTag = "playerTagExemple"; // to recognize the player (via tag) 
+    public static int lapCounter; // to count laps
+    public static int maxNbOfLap; // set how many lap the player has to run before end
+    public static Player[] PlayerList = PhotonNetwork.PlayerList; // List of Player in the Room
 
-    void Start()
+    public static void Start()
     {
         initialization();
     }
 
- 
+    // If Hos Player Has Joined the Game
+    public static bool HostJoined()
+    {
+        if (PlayerList.Length == SpawnPlayers.spawnPositions.Length)
+            return true;
+
+        return false;
+    }
+    
     // To set the initial state of racce
-    void initialization()
+    public static void initialization()
     {
         lapCounter = 0; // actual lap done
         maxNbOfLap = 3; // Needed lap to win
@@ -24,28 +33,30 @@ public class RaceScript : MonoBehaviour
 
     // When the player Trigger the box collider at the start/finish line
     /// <param name="_objectWhichPassTheLine"></param>
-    void OnTriggerEnter(Collider _objectWhichPassTheLine)
+    public static void OnTriggerEnter(Collider _objectWhichPassTheLine)
     {
         if (_objectWhichPassTheLine.gameObject.CompareTag(playerTag))
         {
             lapCounter++;  
         }
-        checkLapCounter();
+        IsFinished();
     }
 
 
     // Check the lap counter to see how many lap the player did
-    void checkLapCounter()
+    public static bool IsFinished()
     {
         if (lapCounter == maxNbOfLap + 1) // +1 because the player will trigger the collider at the start.
         {
-            endGame();
+            return true;
         }
+
+        return false;
     }
 
 
     // You end the race when the player reach the max number of lap.
-    void endGame()
+    public static void endGame()
     {
         // We have to STOP the game
         Debug.Log("The game is ended, the player did 3 lap");
