@@ -8,7 +8,7 @@ using static System.Random;
 public class SpawnPlayers : MonoBehaviour {
     public GameObject playerPrefab;
     public GameObject playerCamera;
-    public Transform[] spawnPositions;
+    public static Transform[] spawnPositions;
     // public List<bool> _isFree = new List<bool>();
 
 
