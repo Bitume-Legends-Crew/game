@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Road
+  - EnterExitPoint
+  - Vehicle
+  - Wheel
   layers:
   - Default
   - TransparentFX
@@ -17,8 +20,8 @@ TagManager:
   - WheelCollider
   - 
   - Car
-  - 
-  - 
+  - CHECKPOINTS
+  - AI POINTS
   - 
   - 
   - 

@@ -4,7 +4,6 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     public Camera cam;
-
     public NavMeshAgent agent;
 
     void Update()
