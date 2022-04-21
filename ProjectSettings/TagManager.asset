@@ -8,6 +8,7 @@ TagManager:
   - EnterExitPoint
   - Vehicle
   - Wheel
+  - DirtRoad
   layers:
   - Default
   - TransparentFX
