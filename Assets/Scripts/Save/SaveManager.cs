@@ -23,10 +23,10 @@ public class SaveManager : MonoBehaviour
 
     public void Load()
     {
-        if (File.Exists(Application.persistentDataPath + "/playerinfo.data"))
+        if (File.Exists(Application.persistentDataPath + "/playerinfo.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "playerinfo.dat", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/playerinfo.dat", FileMode.Open);
             PlayerData_Storage data = (PlayerData_Storage) bf.Deserialize(file);
 
             currentCar = data.currentCar;
@@ -38,7 +38,7 @@ public class SaveManager : MonoBehaviour
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter(); // To encrypt our Save
-        FileStream file = File.Create(Application.persistentDataPath + "playerinfo.dat"); // Directory of save
+        FileStream file = File.Create(Application.persistentDataPath + "/playerinfo.dat"); // Directory of save
         PlayerData_Storage data = new PlayerData_Storage();
 
         data.currentCar = currentCar;
