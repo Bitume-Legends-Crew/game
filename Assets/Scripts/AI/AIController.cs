@@ -6,22 +6,20 @@ public class AIController : MonoBehaviour
 { 
     public BoxCollider[] checkpoints;
     public NavMeshAgent agent;
-    private int i = 0;
+    private int _i = 0;
     void Update()
     {
-        if (i < checkpoints.Length)
-        {
-            agent.SetDestination(checkpoints[i].center);
-        }
+        // if (_i < checkpoints.Length)
+        agent.SetDestination(checkpoints[_i].center);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == checkpoints[i].name)
-        {
-            Debug.LogFormat($"OK, we're on the {other.gameObject.name} collider. i={i}");
-            agent.SetDestination(checkpoints[i + 1].center);
-            i++;
-        }
+        if (other.gameObject.name != checkpoints[_i].name)
+            return;
+        
+        Debug.LogFormat($"OK, we're on the {other.gameObject.name} collider. i={_i}");
+        agent.SetDestination(checkpoints[_i + 1].center);
+        _i++;
     }
 }
