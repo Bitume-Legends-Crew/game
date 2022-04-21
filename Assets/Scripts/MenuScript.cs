@@ -24,7 +24,7 @@ public class MenuScript : MonoBehaviour
     
     public void Garage()
     {
-        garage.SetActive(true);
+        SceneManager.LoadScene("Garage");
     }
     
     public void QuitGame()
