@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Track/IA/Port_AI.unity
     guid: e824b51c0c7384cd7b3f1f7ab578abe0
+  - enabled: 1
+    path: Assets/Scenes/Garage.unity
+    guid: f69892007dd5f3f49ac1c44b841761a9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9749da62c5bb4c048a8f7f8f3b2aee45, type: 2}
