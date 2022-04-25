@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TimerMenu : MonoBehaviour
 {
-    private List<string> TrackList = new List<string>(){"City", "Port"}; // Track List
+    private List<string> TrackList = new List<string>(){"Timer_City", "Timer_Port"}; // Track List
     private int i = 0; // Index for list
 
     public void Back()
@@ -34,31 +34,14 @@ public class TimerMenu : MonoBehaviour
         i = (i + 1) % TrackList.Count;
         if (TrackList[i % 2] == "City")
         {
-            // SET ACTIVE IMAGE CITY
-            // SET INACTIVE IMAGE PORT
+            GameObject.Find("City_Image").SetActive(true);
+            GameObject.Find("Port_Image").SetActive(false);
         }
         
         if (TrackList[i % 2] == "Port")
         {
-            // SET ACTIVE IMAGE PORT
-            // SET INACTIVE IMAGE CITY
-        }
-    }
-    
-    // TO BE REMOVED ??
-    public void TrackSelectLeft()
-    {
-        i = i - 1 % TrackList.Count;
-        if (TrackList[i % 2] == "City")
-        {
-            // SET ACTIVE IMAGE CITY
-            // SET INACTIVE IMAGE PORT
-        }
-        
-        if (TrackList[i % 2] == "Port")
-        {
-            // SET ACTIVE IMAGE PORT
-            // SET INACTIVE IMAGE CITY
+            GameObject.Find("Port_Image").SetActive(true);
+            GameObject.Find("City_Image").SetActive(false);
         }
     }
 
