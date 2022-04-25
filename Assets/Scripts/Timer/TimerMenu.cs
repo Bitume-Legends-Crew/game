@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,6 +6,11 @@ public class TimerMenu : MonoBehaviour
 {
     private List<string> TrackList = new List<string>(){"Timer_City", "Timer_Port"}; // Track List
     private int i = 0; // Index for list
+    private bool setDifficulty = false;
+    public GameObject Error;
+    public GameObject CityImage;
+    public GameObject PortImage;
+    
 
     public void Back()
     {
@@ -16,37 +19,49 @@ public class TimerMenu : MonoBehaviour
 
     public void DifficultyEasy()
     {
-        // Load Easy Difficulty with I.A.
+        TimerMode.startingTime = 90f;
+        setDifficulty = true;
+        Error.SetActive(false);
     }
     
     public void DifficultyMedium()
     {
-        // Load Medium Difficulty with I.A.
+        TimerMode.startingTime = 60f;
+        setDifficulty = true;
+        Error.SetActive(false);
     }
     
     public void DifficultHard()
     {
-        // Load Hard Difficulty with I.A.
+        TimerMode.startingTime = 5f;
+        setDifficulty = true;
+        Error.SetActive(false);
     }
 
     public void TrackSelectRight()
     {
         i = (i + 1) % TrackList.Count;
-        if (TrackList[i % 2] == "City")
+        if (TrackList[i % 2] == "Timer_City")
         {
-            GameObject.Find("City_Image").SetActive(true);
-            GameObject.Find("Port_Image").SetActive(false);
+            CityImage.SetActive(true);
+            PortImage.SetActive(false);
         }
         
-        if (TrackList[i % 2] == "Port")
+        if (TrackList[i % 2] == "Timer_Port")
         {
-            GameObject.Find("Port_Image").SetActive(true);
-            GameObject.Find("City_Image").SetActive(false);
+            CityImage.SetActive(false);
+            PortImage.SetActive(true);
         }
     }
 
     public void StarGame()
     {
-        SceneManager.LoadScene(TrackList[i]);
+        // If difficulty Not set
+        if (setDifficulty)
+            SceneManager.LoadScene(TrackList[i]);
+        
+        else
+            Error.SetActive(true);
+            
     }
 }

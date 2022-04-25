@@ -1,0 +1,55 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
+
+public class TimerMode : MonoBehaviour
+{
+    private float currentTime = 0f;
+    public static float startingTime;
+    public Text countDownText;
+    public GameObject gameOverPanel;
+    // public AudioSource timeAudio;
+    // public GameObject Car;
+    
+    public Button Retry;
+    public Button Menu;
+
+    private void Start()
+    {
+        CountDown.CountDownTimer = 3;
+        currentTime = startingTime;
+    }
+
+    public void RetryGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    
+    public void BackMenu()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
+    }
+
+    private void Update()
+    {
+        if (CountDown.CountDownTimer == 0)
+        {
+            currentTime -= 1 * Time.deltaTime;
+            countDownText.text = "Remaining Time: " + currentTime.ToString("0") + " sec.";
+
+            if (currentTime <= 0)
+            {
+                currentTime = 0;
+                // timeAudio.Play();
+                gameOverPanel.SetActive(true);
+                Time.timeScale = 0f;
+            
+            }
+        }
+    }
+}
