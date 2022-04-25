@@ -5,7 +5,7 @@ using ExitGames.Client.Photon.StructWrapping;
 using UnityEngine;
 using Vector3 = System.Numerics.Vector3;
 
-public class CarLoaderPort : MonoBehaviour
+public class CarLoader : MonoBehaviour
 {
    [SerializeField] private GameObject[] carModels;
 
