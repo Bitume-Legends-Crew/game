@@ -9,10 +9,13 @@ using Button = UnityEngine.UI.Button;
 
 public class TimerMode : MonoBehaviour
 {
+    public static int passedCheckpoint = 0;
     private float currentTime = 0f;
     public static float startingTime;
     public Text countDownText;
     public GameObject gameOverPanel;
+    public GameObject gameWinPanel;
+    public BoxCollider[] Checkpoint;
     // public AudioSource timeAudio;
     // public GameObject Car;
     
@@ -48,7 +51,13 @@ public class TimerMode : MonoBehaviour
                 // timeAudio.Play();
                 gameOverPanel.SetActive(true);
                 Time.timeScale = 0f;
+            }
             
+            else if (currentTime >= 0 && passedCheckpoint == Checkpoint.Length)
+            {
+                // timeAudio.Play();
+                gameWinPanel.SetActive(true);
+                Time.timeScale = 0f;
             }
         }
     }
