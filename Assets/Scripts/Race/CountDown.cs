@@ -11,6 +11,7 @@ public class CountDown : MonoBehaviour
 {
     public static int CountDownTimer;
     public Text countDownDisplay;
+    public GameObject SceneManagement;
     
 
     private void Start()
@@ -26,9 +27,11 @@ public class CountDown : MonoBehaviour
         {
             countDownDisplay.text = CountDownTimer.ToString();
             yield return new WaitForSeconds(1f);
+            SceneManagement.SetActive(false);
             CountDownTimer--;
         }
-
+        
+        SceneManagement.SetActive(true);
         countDownDisplay.text = "GO";
         yield return new WaitForSeconds(1f);
         countDownDisplay.gameObject.SetActive(false);
