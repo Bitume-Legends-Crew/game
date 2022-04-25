@@ -8,6 +8,6 @@ public class PassedChekcpoints : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Vehicle")
-            TimerMode.passedCheckpoint++;
+            TimerMode.passedCheckpoint = TimerMode.passedCheckpoint + 1;
     }
 }

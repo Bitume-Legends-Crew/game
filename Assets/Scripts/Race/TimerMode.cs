@@ -21,6 +21,7 @@ public class TimerMode : MonoBehaviour
     
     public Button Retry;
     public Button Menu;
+    public GameObject Back;
 
     private void Start()
     {
@@ -50,13 +51,15 @@ public class TimerMode : MonoBehaviour
                 currentTime = 0;
                 // timeAudio.Play();
                 gameOverPanel.SetActive(true);
+                Back.SetActive(false);
                 Time.timeScale = 0f;
             }
             
-            else if (currentTime >= 0 && passedCheckpoint == Checkpoint.Length)
+            else if (currentTime >= 0 && Checkpoint.Length == passedCheckpoint)
             {
                 // timeAudio.Play();
                 gameWinPanel.SetActive(true);
+                Back.SetActive(false);
                 Time.timeScale = 0f;
             }
         }

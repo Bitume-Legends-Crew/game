@@ -233,6 +233,11 @@ namespace NWH.VehiclePhysics2
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        public void Back()
+        {
+            SceneManager.LoadScene("Scenes/Timer");
+        }
     }
 }
 
