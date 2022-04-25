@@ -23,13 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
     guid: 185c8cddaa5ec42869b3f1921802f75b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Track/City.unity
     guid: 41b4b76e820993d4ea957512b7e82b34
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Track/Port.unity
     guid: d816a02aec177fc4fb305aa84d843c19
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Track/IA/Port_AI.unity
     guid: e824b51c0c7384cd7b3f1f7ab578abe0
   - enabled: 1
@@ -38,7 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Track/Timer/Timer_Port.unity
     guid: 5bfbdccdb5e8ef5409dfddd051edf46d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Track/Timer/Timer_City.unity
     guid: e8f36c51c70d39740811c80dcce1c7b6
   m_configObjects:
