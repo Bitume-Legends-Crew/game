@@ -26,14 +26,14 @@ public class TimerMenu : MonoBehaviour
     
     public void DifficultyMedium()
     {
-        TimerMode.startingTime = 60f;
+        TimerMode.startingTime = 70f;
         setDifficulty = true;
         Error.SetActive(false);
     }
     
     public void DifficultHard()
     {
-        TimerMode.startingTime = 5f;
+        TimerMode.startingTime = 60f;
         setDifficulty = true;
         Error.SetActive(false);
     }
