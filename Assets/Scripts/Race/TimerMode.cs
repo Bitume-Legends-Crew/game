@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 
 public class TimerMode : MonoBehaviour
@@ -13,17 +10,17 @@ public class TimerMode : MonoBehaviour
     private float currentTime = 0f;
     public static float startingTime;
     public Text countDownText;
-    public GameObject gameOverPanel;
-    public GameObject gameWinPanel;
     public BoxCollider[] Checkpoint;
     // public AudioSource timeAudio;
     // public GameObject Car;
-    
-    public Button ButtonRetry_Lost;
-    public Button ButtonMenu_Lost;
-    public Button ButtonRetry_Win;
-    public Button ButtonMenu_Win;
-    public GameObject Back;
+
+    public GameObject TextWin;
+    public GameObject TextLoose;
+    public GameObject BackGroundWin;
+    public GameObject BackGroundLoose;
+    public GameObject ButtonRetry;
+    public GameObject ButtonMenu;
+    public GameObject ButtonBack;
 
     private void Start()
     {
@@ -34,35 +31,52 @@ public class TimerMode : MonoBehaviour
     
     public void Retry()
     {
-        CountDown.CountDownTimer = 3;
-        currentTime = startingTime;
-        Destroy(MusicHandler.musicObj[0]);
-        
-        passedCheckpoint = 0;
-        gameOverPanel.SetActive(false);
-        gameWinPanel.SetActive(false);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        Resources.UnloadUnusedAssets();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+        Start();
     }
     
     public void Menu()
     {
-        passedCheckpoint = 0;
-        gameOverPanel.SetActive(false);
-        gameWinPanel.SetActive(false);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        Resources.UnloadUnusedAssets();
         SceneManager.LoadScene("Scenes/Menu");
+        Time.timeScale = 1f;
+        Start();
     }
     
     public void BackMenu()
     {
+        SceneManager.LoadScene("Scenes/Menu");
+        Time.timeScale = 1f;
+        Start();
+    }
+
+    public void Win()
+    {
+        // timeAudio.Play();
         passedCheckpoint = 0;
-        gameOverPanel.SetActive(false);
-        gameWinPanel.SetActive(false);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        Resources.UnloadUnusedAssets();
+        TextWin.SetActive(true);
+        BackGroundWin.SetActive(true);
+        ButtonRetry.SetActive(true);
+        ButtonMenu.SetActive(true);
+        ButtonBack.SetActive(false);
+        Time.timeScale = 0f;
+    }
+
+    public void Loose()
+    {
+        // timeAudio.Play();
+        passedCheckpoint = 0;
+        currentTime = 0;
+        TextLoose.SetActive(true);
+        BackGroundLoose.SetActive(true);
+        ButtonRetry.SetActive(true);
+        ButtonMenu.SetActive(true);
+        ButtonBack.SetActive(false);
+        Time.timeScale = 0f;
+    }
+
+    public void Back()
+    {
         SceneManager.LoadScene("Scenes/Menu");
     }
 
@@ -75,21 +89,12 @@ public class TimerMode : MonoBehaviour
 
             if (currentTime <= 0)
             {
-                passedCheckpoint = 0;
-                currentTime = 0;
-                // timeAudio.Play();
-                gameOverPanel.SetActive(true);
-                Back.SetActive(false);
-                Time.timeScale = 0f;
+                Loose();
             }
             
             else if (currentTime >= 0 && Checkpoint.Length == passedCheckpoint)
             {
-                passedCheckpoint = 0;
-                // timeAudio.Play();
-                gameWinPanel.SetActive(true);
-                Back.SetActive(false);
-                Time.timeScale = 0f;
+                Win();
             }
         }
     }
