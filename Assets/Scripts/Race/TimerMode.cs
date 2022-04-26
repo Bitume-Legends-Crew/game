@@ -27,6 +27,7 @@ public class TimerMode : MonoBehaviour
     {
         CountDown.CountDownTimer = 3;
         currentTime = startingTime;
+        Destroy(MusicHandler.musicObj[0]);;
     }
 
     public void RetryGame()
