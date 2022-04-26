@@ -9,6 +9,7 @@ TagManager:
   - Vehicle
   - Wheel
   - DirtRoad
+  - MusicMenu
   layers:
   - Default
   - TransparentFX
