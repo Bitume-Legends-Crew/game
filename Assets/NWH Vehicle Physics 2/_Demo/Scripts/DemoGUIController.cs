@@ -74,7 +74,7 @@ namespace NWH.VehiclePhysics2
             damageButton.onClick.AddListener(ToggleDamage);
             repairButton.onClick.AddListener(RepairDamage);
             
-            //resetButton.onClick.AddListener(ResetScene);
+            resetButton.onClick.AddListener(ResetScene);
             helpButton.onClick.AddListener(ToggleHelpWindow);
             telemetryButton.onClick.AddListener(ToggleTelemetryWindow);
             settingsButton.onClick.AddListener(ToggleSettingsWindow);
@@ -228,8 +228,12 @@ namespace NWH.VehiclePhysics2
             settingsWindow.SetActive(false);
             helpWindow.SetActive(false);
         }
-
-       
+        
+        public void ResetScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        
     }
 }
 
