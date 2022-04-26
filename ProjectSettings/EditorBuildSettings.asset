@@ -29,17 +29,14 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Track/Port.unity
     guid: d816a02aec177fc4fb305aa84d843c19
-  - enabled: 0
-    path: Assets/Scenes/Track/IA/Port_AI.unity
-    guid: e824b51c0c7384cd7b3f1f7ab578abe0
   - enabled: 1
     path: Assets/Scenes/Garage.unity
     guid: f69892007dd5f3f49ac1c44b841761a9
   - enabled: 1
     path: Assets/Scenes/Track/Timer/Timer_Port.unity
     guid: 5bfbdccdb5e8ef5409dfddd051edf46d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Track/Timer/Timer_City.unity
-    guid: e8f36c51c70d39740811c80dcce1c7b6
+    guid: c1a90e26d0260854c8745bb092c71da5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9749da62c5bb4c048a8f7f8f3b2aee45, type: 2}
