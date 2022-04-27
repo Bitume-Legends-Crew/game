@@ -6,7 +6,7 @@ using Button = UnityEngine.UI.Button;
 
 public class TimerMode : MonoBehaviour
 {
-    public static int passedCheckpoint = 0;
+    public static int passedCheckpoint;
     private float currentTime = 0f;
     public static float startingTime;
     public Text countDownText;
@@ -26,6 +26,7 @@ public class TimerMode : MonoBehaviour
     {
         CountDown.CountDownTimer = 3;
         currentTime = startingTime;
+        passedCheckpoint = 0;
         Destroy(MusicHandler.musicObj[0]);
     }
     

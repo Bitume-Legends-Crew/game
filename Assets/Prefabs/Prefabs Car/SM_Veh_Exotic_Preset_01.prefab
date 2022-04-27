@@ -515,7 +515,7 @@ MonoBehaviour:
         name: Rear Differential
     engine:
       angularVelocity: 0
-      inertia: 0.027
+      inertia: 0.07
       name: Engine
       outputASelector:
         name: Clutch
@@ -551,7 +551,7 @@ MonoBehaviour:
       OnStop:
         m_PersistentCalls:
           m_Calls: []
-      flyingStartEnabled: 1
+      flyingStartEnabled: 0
       powerCurve:
         serializedVersion: 2
         m_Curve:

@@ -33,7 +33,7 @@ public class TimerMenu : MonoBehaviour
     
     public void DifficultHard()
     {
-        TimerMode.startingTime = 60f;
+        TimerMode.startingTime = 63f;
         setDifficulty = true;
         Error.SetActive(false);
     }
