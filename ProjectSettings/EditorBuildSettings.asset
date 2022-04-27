@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Timer.unity
     guid: ac12f4619d55f944c83222da27203771
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene1.unity
     guid: 185c8cddaa5ec42869b3f1921802f75b
   - enabled: 0

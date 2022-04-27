@@ -23,7 +23,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     public GameObject playerListItemPrefab;
     public GameObject startGameButton;
     public GameObject noStartGameButton;
-
+    
     private bool _submited = false;
 
     private void Awake()
@@ -167,7 +167,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel("Scene1");
+        PhotonNetwork.LoadLevel(TrackPossible.MultiplayerTrack[Random.Range(0,1)]);
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
