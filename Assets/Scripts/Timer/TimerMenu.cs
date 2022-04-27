@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class TimerMenu : MonoBehaviour
 {
-    private List<string> TrackList = new List<string>(){"Timer_City", "Timer_Port"}; // Track List
+    private List<string> TrackList = TrackPossible.TimerTrack; // Track List
     private int i = 0; // Index for list
     private bool setDifficulty = false;
     public GameObject Error;
