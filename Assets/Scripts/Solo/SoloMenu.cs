@@ -6,8 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class SoloMenu : MonoBehaviour
 {
-    private List<string> TrackList = new List<string>(){"City", "Port"}; // Track List
+    private List<string> TrackList = TrackPossible.SoloTrack; // Track List
     private int i = 0; // Index for list
+    private bool setDifficulty = false;
+    public GameObject error;
+    public GameObject cityImage;
+    public GameObject portImage;
 
     public void Back()
     {
@@ -17,53 +21,46 @@ public class SoloMenu : MonoBehaviour
     public void DifficultyEasy()
     {
         // Load Easy Difficulty with I.A.
+        Debug.LogFormat($"You press the simple level for AI");
+        setDifficulty = true;
     }
-    
+
     public void DifficultyMedium()
     {
         // Load Medium Difficulty with I.A.
+        Debug.LogFormat($"You press the medium level for AI");
+        setDifficulty = true;
     }
-    
+
     public void DifficultHard()
     {
         // Load Hard Difficulty with I.A.
+        Debug.LogFormat($"You press the hard level for AI");
+        setDifficulty = true;
     }
 
     public void TrackSelectRight()
     {
         i = (i + 1) % TrackList.Count;
-        if (TrackList[i % 2] == "City")
+        if (TrackList[i % 2] == "City_AI")
         {
-            // SET ACTIVE IMAGE CITY
-            // SET INACTIVE IMAGE PORT
+            cityImage.SetActive(true);
+            portImage.SetActive(false);
         }
-        
-        if (TrackList[i % 2] == "Port")
+
+        if (TrackList[i % 2] == "Port_AI")
         {
-            // SET ACTIVE IMAGE PORT
-            // SET INACTIVE IMAGE CITY
-        }
-    }
-    
-    // TO BE REMOVED ??
-    public void TrackSelectLeft()
-    {
-        i = i - 1 % TrackList.Count;
-        if (TrackList[i % 2] == "City")
-        {
-            // SET ACTIVE IMAGE CITY
-            // SET INACTIVE IMAGE PORT
-        }
-        
-        if (TrackList[i % 2] == "Port")
-        {
-            // SET ACTIVE IMAGE PORT
-            // SET INACTIVE IMAGE CITY
+            cityImage.SetActive(false);
+            portImage.SetActive(true);
         }
     }
 
     public void StarGame()
     {
-        SceneManager.LoadScene(TrackList[i]);
+        if (setDifficulty)
+            SceneManager.LoadScene(TrackList[i]);
+
+        else
+            error.SetActive(true);
     }
 }
