@@ -25,13 +25,16 @@ public class CountDown : MonoBehaviour
         // transform.GetChild(SaveManager.instance.currentCar).position.
         while (CountDownTimer > 0)
         {
+            SceneManagement.SetActive(false);
+            if (CountDownTimer == 1)
+                SceneManagement.SetActive(true);
+            
             countDownDisplay.text = CountDownTimer.ToString();
             yield return new WaitForSeconds(1f);
-            SceneManagement.SetActive(false);
             CountDownTimer--;
+            
         }
         
-        SceneManagement.SetActive(true);
         countDownDisplay.text = "GO";
         yield return new WaitForSeconds(1f);
         countDownDisplay.gameObject.SetActive(false);

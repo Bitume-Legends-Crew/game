@@ -3796,7 +3796,7 @@ MonoBehaviour:
   drag: 0
   angularDrag: 0
   physicsMaterial: {fileID: 13400000, guid: 22fc4cb3a07b34e4cbc20c64ac7bd3be, type: 2}
-  centerOfMass: {x: 0, y: 0.3, z: -0.17010951}
+  centerOfMass: {x: 0, y: 0.2, z: -0.17010951}
   inertiaTensor: {x: 1181.4463, y: 1484.8522, z: 993.003}
   vehicleDimensions: {x: 1.5, y: 1.5, z: 4.6}
   vehicleToCamDistance: 0
