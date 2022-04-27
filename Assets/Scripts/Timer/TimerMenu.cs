@@ -7,10 +7,10 @@ public class TimerMenu : MonoBehaviour
     private List<string> TrackList = TrackPossible.TimerTrack; // Track List
     private int i = 0; // Index for list
     private bool setDifficulty = false;
-    public GameObject Error;
-    public GameObject CityImage;
-    public GameObject PortImage;
-    
+    public GameObject error;
+    public GameObject cityImage;
+    public GameObject portImage;
+
 
     public void Back()
     {
@@ -21,21 +21,21 @@ public class TimerMenu : MonoBehaviour
     {
         TimerMode.startingTime = 90f;
         setDifficulty = true;
-        Error.SetActive(false);
+        error.SetActive(false);
     }
-    
+
     public void DifficultyMedium()
     {
         TimerMode.startingTime = 70f;
         setDifficulty = true;
-        Error.SetActive(false);
+        error.SetActive(false);
     }
-    
+
     public void DifficultHard()
     {
         TimerMode.startingTime = 63f;
         setDifficulty = true;
-        Error.SetActive(false);
+        error.SetActive(false);
     }
 
     public void TrackSelectRight()
@@ -43,14 +43,14 @@ public class TimerMenu : MonoBehaviour
         i = (i + 1) % TrackList.Count;
         if (TrackList[i % 2] == "Timer_City")
         {
-            CityImage.SetActive(true);
-            PortImage.SetActive(false);
+            cityImage.SetActive(true);
+            portImage.SetActive(false);
         }
-        
+
         if (TrackList[i % 2] == "Timer_Port")
         {
-            CityImage.SetActive(false);
-            PortImage.SetActive(true);
+            cityImage.SetActive(false);
+            portImage.SetActive(true);
         }
     }
 
@@ -59,9 +59,8 @@ public class TimerMenu : MonoBehaviour
         // If difficulty Not set
         if (setDifficulty)
             SceneManager.LoadScene(TrackList[i]);
-        
+
         else
-            Error.SetActive(true);
-            
+            error.SetActive(true);
     }
 }

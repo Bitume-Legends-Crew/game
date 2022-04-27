@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Loading.unity
-    guid: 5395c11edbb5549348dda4dfe48b97c1
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
@@ -20,15 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Timer.unity
     guid: ac12f4619d55f944c83222da27203771
-  - enabled: 0
-    path: Assets/Scenes/Scene1.unity
-    guid: 185c8cddaa5ec42869b3f1921802f75b
-  - enabled: 0
-    path: Assets/Scenes/Track/City.unity
-    guid: 41b4b76e820993d4ea957512b7e82b34
-  - enabled: 0
-    path: Assets/Scenes/Track/Port.unity
-    guid: d816a02aec177fc4fb305aa84d843c19
   - enabled: 1
     path: Assets/Scenes/Garage.unity
     guid: f69892007dd5f3f49ac1c44b841761a9
@@ -38,5 +26,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Track/Timer/Timer_City.unity
     guid: c1a90e26d0260854c8745bb092c71da5
+  - enabled: 1
+    path: Assets/Scenes/Track/IA/Port_AI.unity
+    guid: 4a5f9a8a4d2d94dbca818df632f8c082
+  - enabled: 1
+    path: Assets/Scenes/Track/IA/City_AI.unity
+    guid: c88136d7cf5f343048da0e880f90ed08
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9749da62c5bb4c048a8f7f8f3b2aee45, type: 2}

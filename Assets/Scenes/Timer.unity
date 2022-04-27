@@ -749,9 +749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b59170aff124e3c488e2a5624c734313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Error: {fileID: 1647575611}
-  CityImage: {fileID: 2093385016}
-  PortImage: {fileID: 331855492}
+  error: {fileID: 1647575611}
+  cityImage: {fileID: 2093385016}
+  portImage: {fileID: 331855492}
 --- !u!1 &870551363
 GameObject:
   m_ObjectHideFlags: 0
