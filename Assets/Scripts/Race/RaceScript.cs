@@ -11,7 +11,7 @@ public class RaceScript : MonoBehaviour
 
     public static void Start()
     {
-        initialization();
+        Initialization();
     }
 
     // If Hos Player Has Joined the Game
@@ -22,9 +22,9 @@ public class RaceScript : MonoBehaviour
 
         return false;
     }
-    
+
     // To set the initial state of racce
-    public static void initialization()
+    public static void Initialization()
     {
         lapCounter = 0; // actual lap done
         maxNbOfLap = 3; // Needed lap to win
@@ -32,35 +32,29 @@ public class RaceScript : MonoBehaviour
 
 
     // When the player Trigger the box collider at the start/finish line
-    /// <param name="_objectWhichPassTheLine"></param>
-    public static void OnTriggerEnter(Collider _objectWhichPassTheLine)
+    /// <param name="objectWhichPassTheLine"></param>
+    public static void OnTriggerEnter(Collider objectWhichPassTheLine)
     {
-        if (_objectWhichPassTheLine.gameObject.CompareTag(playerTag))
+        if (objectWhichPassTheLine.gameObject.CompareTag(playerTag))
         {
-            lapCounter++;  
+            lapCounter++;
         }
+
         IsFinished();
     }
 
 
     // Check the lap counter to see how many lap the player did
     public static bool IsFinished()
-    {
-        if (lapCounter == maxNbOfLap + 1) // +1 because the player will trigger the collider at the start.
-        {
-            return true;
-        }
-
-        return false;
-    }
+        // +1 because the player will trigger the collider at the start.
+        => lapCounter == maxNbOfLap + 1; 
 
 
     // You end the race when the player reach the max number of lap.
-    public static void endGame()
+    public static void EndGame()
     {
         // We have to STOP the game
         Debug.Log("The game is ended, the player did 3 lap");
-        initialization();
+        Initialization();
     }
-
 }
