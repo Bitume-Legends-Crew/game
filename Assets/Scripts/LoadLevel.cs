@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LoadLevel : MonoBehaviour
 {
-    public void LoadLevelNumber(int _index)
+    public void LoadLevelNumber(int index)
     {
-        SceneManager.LoadScene(_index);
+        SceneManager.LoadScene(index);
     }
 
 }
