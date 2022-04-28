@@ -8,6 +8,7 @@ public class AIController : MonoBehaviour
     public BoxCollider[] checkpoints;
     public NavMeshAgent agent;
     public static int _i = 0;
+    
     private int Timer = CountDown.CountDownTimer;
 
     public void Start()
@@ -26,9 +27,10 @@ public class AIController : MonoBehaviour
         _i++;
         SoloScript.IApassedCheckpoint = _i;
 
-        if (_i >= checkpoints.Length + 1)
+        if (_i >= checkpoints.Length)
         {
             Debug.LogFormat("You Won !!!");
+            PortCheckpointIA.IAWin = true;
         }
             
         
