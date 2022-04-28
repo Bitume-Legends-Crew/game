@@ -1775,7 +1775,7 @@ GameObject:
   - component: {fileID: 5646848853580571300}
   m_Layer: 0
   m_Name: SM_Veh_Exotic_01_Wheel_fl
-  m_TagString: Untagged
+  m_TagString: Wheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3029,13 +3029,13 @@ MonoBehaviour:
     collisionIgnoreTags:
     - Wheel
     collisionTimeout: 0.8
-    damageIntensity: 1
+    damageIntensity: 2
     decelerationThreshold: 500
     deformationIgnoreTags:
     - Wheel
-    deformationRadius: 0.4
-    deformationRandomness: 0.01
-    deformationStrength: 1
+    deformationRadius: 2
+    deformationRandomness: 0.5
+    deformationStrength: 5
     deformationVerticesPerFrame: 8000
     meshDeform: 1
     OnCollision:
@@ -4233,7 +4233,7 @@ GameObject:
   - component: {fileID: 5645396909179574328}
   m_Layer: 0
   m_Name: SM_Veh_Exotic_01_Wheel_rl
-  m_TagString: Untagged
+  m_TagString: Wheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5662,7 +5662,7 @@ GameObject:
   - component: {fileID: 5645522128259815168}
   m_Layer: 0
   m_Name: SM_Veh_Exotic_01_Wheel_fr
-  m_TagString: Untagged
+  m_TagString: Wheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6426,7 +6426,7 @@ GameObject:
   - component: {fileID: 5647106273309997746}
   m_Layer: 0
   m_Name: SM_Veh_Exotic_01_Wheel_rr
-  m_TagString: Untagged
+  m_TagString: Wheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

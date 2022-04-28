@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,8 +12,6 @@ public class SoloScript : MonoBehaviour
     private float currentTime = 0f;
     public BoxCollider[] Checkpoint;
     public static int IApassedCheckpoint = AIController._i;
-    public static bool PassedLastCheckpointIA;
-    
     public GameObject TextWin;
     public GameObject TextLoose;
     public GameObject BackGroundWin;
@@ -28,6 +27,8 @@ public class SoloScript : MonoBehaviour
         passedCheckpoint = 0;
         Destroy(MusicHandler.musicObj[0]);
         LastChekcpoint.PassedLastCheckpointPlayer = false;
+        PortCheckpointIA.IALost = false;
+        PortCheckpointIA.IAWin = false;
     }
     
     public void Retry()
@@ -75,6 +76,7 @@ public class SoloScript : MonoBehaviour
         TextLoose.SetActive(true);
         BackGroundLoose.SetActive(true);
         ButtonMenu.SetActive(true);
+        ButtonRetry.SetActive(true);
         ButtonBack.SetActive(false);
         IApassedCheckpoint = 0;
         Time.timeScale = 0f;
@@ -82,14 +84,14 @@ public class SoloScript : MonoBehaviour
 
     private void Update()
     {
-        PassedLastCheckpointIA = LastChekpointIA.PassedLastCheckpointIA;
-        if (passedCheckpoint <= Checkpoint.Length + 1 &&  PassedLastCheckpointIA)
+        
+        if ((LastChekpointIA.PassedLastCheckpointIA && IApassedCheckpoint > Checkpoint.Length && passedCheckpoint <= Checkpoint.Length + 1) || PortCheckpointIA.IAWin)
         {
             Loose();
             Time.timeScale = 0f;
         }
         
-        if (passedCheckpoint >= Checkpoint.Length + 1 && LastChekcpoint.PassedLastCheckpointPlayer)
+        if ((passedCheckpoint >= Checkpoint.Length + 1 && LastChekcpoint.PassedLastCheckpointPlayer) || PortCheckpointIA.IALost)
         {
             Win();
             Time.timeScale = 0f;
