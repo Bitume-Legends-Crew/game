@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class LastChekpointIA : MonoBehaviour
 {
-    public static bool PassedLastCheckpointIA = false;
+    public static bool PassedLastCheckpointIA;
     public bool FirstPass;
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Vehicle")
+        Debug.Log(other.tag);
+        if (CompareTag("IA"))
         {
             if (!FirstPass)
                 FirstPass = true;
             
-            if(FirstPass)
+            else
                 PassedLastCheckpointIA = true;
         }
     }
