@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using Button = UnityEngine.UI.Button;
 
 public class SoloScript : MonoBehaviour
 {
