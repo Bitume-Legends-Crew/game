@@ -21,8 +21,6 @@ public class CountDown : MonoBehaviour
 
     public IEnumerator _CountDown()
     {
-        // LOCK CAR IN CarController
-        // transform.GetChild(SaveManager.instance.currentCar).position.
         while (CountDownTimer > 0)
         {
             SceneManagement.SetActive(false);
