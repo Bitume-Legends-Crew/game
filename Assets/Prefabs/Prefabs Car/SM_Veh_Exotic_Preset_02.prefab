@@ -3033,9 +3033,9 @@ MonoBehaviour:
     decelerationThreshold: 500
     deformationIgnoreTags:
     - Wheel
-    deformationRadius: 2
-    deformationRandomness: 0.5
-    deformationStrength: 5
+    deformationRadius: 0.4
+    deformationRandomness: 0.01
+    deformationStrength: 1
     deformationVerticesPerFrame: 8000
     meshDeform: 1
     OnCollision:
