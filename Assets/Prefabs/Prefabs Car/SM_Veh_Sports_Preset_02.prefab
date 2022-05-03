@@ -2231,7 +2231,7 @@ MonoBehaviour:
     brakeOnReverseDirection: 1
     brakeWhileAsleep: 1
     brakeWhileIdle: 1
-    maxTorque: 5000
+    maxTorque: 4000
     reverseDirectionVelocityThreshold: 0.34
     smoothing: 0
     _isBraking: 0
@@ -2508,7 +2508,7 @@ MonoBehaviour:
       isStalling: 0
       lossTorque: 0
       maxLossTorque: 300
-      maxPower: 120
+      maxPower: 600
       maxRPM: 5000
       minRPM: -50
       OnRevLimiter:
@@ -2961,7 +2961,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    maximumSteerAngle: 25
+    maximumSteerAngle: 35
     returnToCenter: 1
     smoothing: 0.1
     speedSensitiveSteeringCurve:
@@ -3001,8 +3001,8 @@ MonoBehaviour:
     steeringWheelTurnRatio: 5
   enginePosition: {x: 0, y: 0.4, z: 1.5}
   exhaustPosition: {x: 0, y: 0.1, z: -2}
-  lateralSlipThreshold: 0.2
-  longitudinalSlipThreshold: 0.4
+  lateralSlipThreshold: 4
+  longitudinalSlipThreshold: 4
   stateSettings: {fileID: 11400000, guid: 3404c49a4170ad94e87f0e8545b86758, type: 2}
   transmissionPosition: {x: 0, y: 0.2, z: 0.2}
   freezeWhenAsleep: 1
@@ -3012,7 +3012,7 @@ MonoBehaviour:
   drag: 0
   angularDrag: 0
   physicsMaterial: {fileID: 13400000, guid: 22fc4cb3a07b34e4cbc20c64ac7bd3be, type: 2}
-  centerOfMass: {x: -0.000000029802322, y: 0.3741331, z: 0.03080988}
+  centerOfMass: {x: -0.000000029802322, y: 0.1, z: 0.03080988}
   inertiaTensor: {x: 1167.73, y: 1461.1993, z: 975.1307}
   vehicleDimensions: {x: 1.5, y: 1.5, z: 4.6}
   vehicleToCamDistance: 0
