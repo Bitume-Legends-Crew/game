@@ -44,5 +44,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Retry()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
 }
