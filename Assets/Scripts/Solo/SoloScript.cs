@@ -6,7 +6,6 @@ public class SoloScript : MonoBehaviour
     public static int passedCheckpoint;
     private float currentTime = 0f;
     public BoxCollider[] Checkpoint;
-    public static int IApassedCheckpoint = AIController._i;
     public GameObject TextWin;
     public GameObject TextLoose;
     public GameObject BackGroundWin;
@@ -21,16 +20,13 @@ public class SoloScript : MonoBehaviour
         CountDown.CountDownTimer = 3;
         passedCheckpoint = 0;
         Destroy(MusicHandler.musicObj[0]);
-        LastChekcpoint.PassedLastCheckpointPlayer = false;
-        PortCheckpointIA.IALost = false;
-        PortCheckpointIA.IAWin = false;
+        LastCheckpoint.PassedLastCheckpointPlayer = false;
     }
     
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
-        IApassedCheckpoint = 0;
         Start();
     }
     
@@ -38,7 +34,6 @@ public class SoloScript : MonoBehaviour
     {
         SceneManager.LoadScene("Scenes/Menu");
         Time.timeScale = 1f;
-        IApassedCheckpoint = 0;
         Start();
     }
     
@@ -46,7 +41,6 @@ public class SoloScript : MonoBehaviour
     {
         SceneManager.LoadScene("Scenes/Menu");
         Time.timeScale = 1f;
-        IApassedCheckpoint = 0;
         Start();
     }
     
@@ -59,7 +53,6 @@ public class SoloScript : MonoBehaviour
         ButtonRetry.SetActive(true);
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
-        IApassedCheckpoint = 0;
         Time.timeScale = 0f;
     }
 
@@ -73,20 +66,19 @@ public class SoloScript : MonoBehaviour
         ButtonMenu.SetActive(true);
         ButtonRetry.SetActive(true);
         ButtonBack.SetActive(false);
-        IApassedCheckpoint = 0;
         Time.timeScale = 0f;
     }
 
     private void Update()
     {
         
-        if ((LastChekpointIA.PassedLastCheckpointIA && IApassedCheckpoint > Checkpoint.Length && passedCheckpoint <= Checkpoint.Length + 1) || PortCheckpointIA.IAWin)
+        if (LastCheckpointIA.PassedLastCheckpointIA)
         {
             Loose();
             Time.timeScale = 0f;
         }
         
-        if ((passedCheckpoint >= Checkpoint.Length + 1 && LastChekcpoint.PassedLastCheckpointPlayer) || PortCheckpointIA.IALost)
+        if (passedCheckpoint >= Checkpoint.Length + 1 && LastCheckpoint.PassedLastCheckpointPlayer)
         {
             Win();
             Time.timeScale = 0f;

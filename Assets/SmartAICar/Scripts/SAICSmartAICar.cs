@@ -328,12 +328,15 @@ public class SAICSmartAICar : MonoBehaviour {
 	}
 		
 	void  FixedUpdate (){
-	
-		Engine();
-		Navigation();
-		FixedRaycasts();
-		Resetting();
-		AntiRollBars();
+		if (CountDown.CountDownTimer == 0)
+		{
+			Engine();
+			Navigation();
+			FixedRaycasts();
+			Resetting();
+			AntiRollBars();
+		}
+		
 
 	}
 

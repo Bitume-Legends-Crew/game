@@ -28,7 +28,7 @@ public class TimerMode : MonoBehaviour
         currentTime = startingTime;
         passedCheckpoint = 0;
         Destroy(MusicHandler.musicObj[0]);
-        LastChekcpoint.PassedLastCheckpointPlayer = false;
+        LastCheckpoint.PassedLastCheckpointPlayer = false;
     }
     
     public void Retry()
@@ -94,7 +94,7 @@ public class TimerMode : MonoBehaviour
                 Loose();
             }
             
-            else if (currentTime >= 0 && LastChekcpoint.PassedLastCheckpointPlayer && passedCheckpoint >= Checkpoint.Length + 1)
+            else if (currentTime >= 0 && LastCheckpoint.PassedLastCheckpointPlayer && passedCheckpoint >= Checkpoint.Length + 1)
             {
                 Win();
             }

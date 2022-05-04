@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Photon.Realtime;
 using UnityEngine;
 
-public class PassedChekcpoints : MonoBehaviour
+public class PassedCheckpoints : MonoBehaviour
 {
     public void OnTriggerEnter(Collider other)
     {

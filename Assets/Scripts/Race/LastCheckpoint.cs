@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LastChekpointIA : MonoBehaviour
+public class LastCheckpoint : MonoBehaviour
 {
-    public static bool PassedLastCheckpointIA;
+    public static bool PassedLastCheckpointPlayer = false;
     public bool FirstPass;
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
-        if (CompareTag("IA"))
+        if (other.tag == "Vehicle")
         {
             if (!FirstPass)
                 FirstPass = true;
             
-            else
-                PassedLastCheckpointIA = true;
+            if(FirstPass)
+                PassedLastCheckpointPlayer = true;
         }
     }
 }

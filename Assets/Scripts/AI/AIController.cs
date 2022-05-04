@@ -23,14 +23,12 @@ public class AIController : MonoBehaviour
 
         if (other.gameObject.name != checkpoints[_i].name)
             return;
-        
+
         _i++;
-        SoloScript.IApassedCheckpoint = _i;
 
         if (_i >= checkpoints.Length)
         {
             Debug.LogFormat("You Won !!!");
-            PortCheckpointIA.IAWin = true;
         }
             
         
