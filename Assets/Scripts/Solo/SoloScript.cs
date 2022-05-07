@@ -13,37 +13,63 @@ public class SoloScript : MonoBehaviour
     public GameObject ButtonRetry;
     public GameObject ButtonMenu;
     public GameObject ButtonBack;
+
+    public GameObject Easy_AI;
+    public GameObject Medium_AI;
+    public GameObject Hard_AI;
+    
     
     
     private void Start()
     {
+        Destroy(MusicHandler.musicObj[0]);
+        Time.timeScale = 1f;
+        AI_Activation();
         CountDown.CountDownTimer = 3;
         passedCheckpoint = 0;
-        Destroy(MusicHandler.musicObj[0]);
         LastCheckpoint.PassedLastCheckpointPlayer = false;
+        LastCheckpointIA.PassedLastCheckpointIA = false;
+        
+        // For Win
+        TextWin.SetActive(false);
+        BackGroundWin.SetActive(false);
+        ButtonRetry.SetActive(false);
+        ButtonMenu.SetActive(false);
+        
+        // For Loose
+        TextLoose.SetActive(false);
+        BackGroundLoose.SetActive(false);
+        ButtonMenu.SetActive(false);
+        ButtonRetry.SetActive(false);
+        ButtonBack.SetActive(false);
+        
     }
-    
-    public void Retry()
+
+    public void AI_Activation()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1f;
-        Start();
+        if (SoloMenu.Difficulty == 1)
+        {
+            Easy_AI.SetActive(true);
+            Medium_AI.SetActive(false);
+            Hard_AI.SetActive(false);
+        }
+        
+        if (SoloMenu.Difficulty == 2)
+        {
+            Easy_AI.SetActive(false);
+            Medium_AI.SetActive(true);
+            Hard_AI.SetActive(false);
+        }
+        
+        if (SoloMenu.Difficulty == 3)
+        {
+            Easy_AI.SetActive(false);
+            Medium_AI.SetActive(false);
+            Hard_AI.SetActive(true);
+        }
     }
     
-    public void Menu()
-    {
-        SceneManager.LoadScene("Scenes/Menu");
-        Time.timeScale = 1f;
-        Start();
-    }
-    
-    public void BackMenu()
-    {
-        SceneManager.LoadScene("Scenes/Menu");
-        Time.timeScale = 1f;
-        Start();
-    }
-    
+
     public void Win()
     {
         // timeAudio.Play();

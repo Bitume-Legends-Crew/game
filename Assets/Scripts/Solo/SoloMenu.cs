@@ -12,10 +12,12 @@ public class SoloMenu : MonoBehaviour
     public GameObject error;
     public GameObject cityImage;
     public GameObject portImage;
+    public static int Difficulty;
 
     public void Back()
     {
         SceneManager.LoadScene("Menu");
+        setDifficulty = false;
     }
 
     public void DifficultyEasy()
@@ -23,6 +25,7 @@ public class SoloMenu : MonoBehaviour
         // Load Easy Difficulty with I.A.
         Debug.LogFormat($"You press the simple level for AI");
         setDifficulty = true;
+        Difficulty = 1;
     }
 
     public void DifficultyMedium()
@@ -30,6 +33,7 @@ public class SoloMenu : MonoBehaviour
         // Load Medium Difficulty with I.A.
         Debug.LogFormat($"You press the medium level for AI");
         setDifficulty = true;
+        Difficulty = 2;
     }
 
     public void DifficultHard()
@@ -37,6 +41,7 @@ public class SoloMenu : MonoBehaviour
         // Load Hard Difficulty with I.A.
         Debug.LogFormat($"You press the hard level for AI");
         setDifficulty = true;
+        Difficulty = 3;
     }
 
     public void TrackSelectRight()
