@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -9,6 +10,12 @@ public class PauseMenu : MonoBehaviour
     private bool _gameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject backButton;
+
+    public void Start()
+    {
+        backButton.SetActive(true);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -45,6 +52,7 @@ public class PauseMenu : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
         Time.timeScale = 1f;
     }
 }

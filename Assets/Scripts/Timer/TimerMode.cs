@@ -29,6 +29,7 @@ public class TimerMode : MonoBehaviour
         passedCheckpoint = 0;
         Destroy(MusicHandler.musicObj[0]);
         LastCheckpoint.PassedLastCheckpointPlayer = false;
+        LastCheckpoint.PassedLastCheckpointPlayer = false;
     }
     
     public void Retry()
