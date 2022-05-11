@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
     public GameObject garage;
+    public GameObject optionMenu;
     
     public void Timer()
     {
@@ -35,5 +36,10 @@ public class MenuScript : MonoBehaviour
     public void BugReport()
     {
         Application.OpenURL("https://docs.google.com/forms/d/e/1FAIpQLSdtMqQPdZ3fohHimmtKlI6b1E8ZpBkLsoX8qXae7XPpkvpLcQ/viewform?usp=pp_url");
+    }
+
+    public void OpenOptions()
+    {
+        optionMenu.SetActive(true);
     }
 }
