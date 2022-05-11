@@ -167,7 +167,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel(TrackPossible.MultiplayerTrack[Random.Range(0,1)]);
+        PhotonNetwork.LoadLevel(TrackPossible.MultiplayerTrack[Random.Range(0, TrackPossible.MultiplayerTrack.Count)]);
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
