@@ -23,8 +23,6 @@ public class Launcher : MonoBehaviourPunCallbacks
     public GameObject playerListItemPrefab;
     public GameObject startGameButton;
     public GameObject noStartGameButton;
-    
-    private bool _submited = false;
 
     private void Awake()
     {
@@ -35,14 +33,13 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         // This function connect the game at the server
         PhotonNetwork.ConnectUsingSettings();
-        PhotonNetwork.ConnectToRegion("eu");
     }
 
     public override void OnConnectedToMaster()
     {
         // This function is called when the game is connected
         PhotonNetwork.JoinLobby();
-        Debug.Log("Connected !!");
+        Debug.Log("Connected to Master");
         PhotonNetwork.AutomaticallySyncScene = true;
     }
 
@@ -51,15 +48,14 @@ public class Launcher : MonoBehaviourPunCallbacks
         // This function is called to call the lobby scene (the page of connection)
         MultiplayerMenuManager.Instance.OpenMenu("Background");
         MultiplayerMenuManager.Instance.OpenMenu("Main");
+        Debug.Log("Connected to Lobby");
     }
 
     public void CreateRoom()
     {
         // Remove the if statement if you would create a room without name
         if (string.IsNullOrEmpty(createInput.text))
-        {
             return;
-        }
 
         PhotonNetwork.CreateRoom(createInput.text);
         MultiplayerMenuManager.Instance.OpenMenu("loading");
@@ -68,9 +64,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     public void JoinRoom()
     {
         if (string.IsNullOrEmpty(joinInput.text))
-        {
             return;
-        }
 
         PhotonNetwork.JoinRoom(joinInput.text);
         MultiplayerMenuManager.Instance.OpenMenu("loading");
@@ -84,23 +78,19 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
+        if (string.IsNullOrEmpty(PhotonNetwork.NickName))
+            PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
+        
         MultiplayerMenuManager.Instance.OpenMenu("RoomMenu");
         roomNameText.text = PhotonNetwork.CurrentRoom.Name;
 
         foreach (Transform child in playerListContent)
-        {
             Destroy(child.gameObject);
-        }
 
         foreach (Player player in PhotonNetwork.PlayerList)
         {
             Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>()
                 .SetUp(player);
-        }
-
-        if (!_submited)
-        {
-            PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
         }
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
@@ -133,22 +123,17 @@ public class Launcher : MonoBehaviourPunCallbacks
     public void NicknameSubmit()
     {
         PhotonNetwork.NickName = playerNickname.text;
-        _submited = true;
     }
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         foreach (Transform trans in roomListContent)
-        {
             Destroy(trans.gameObject);
-        }
 
         foreach (var room in roomList)
         {
             if (room.RemovedFromList)
-            {
                 continue;
-            }
 
             Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(room);
         }
@@ -156,13 +141,13 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.LogFormat("OnPlayerEnteredRoom() {0}", newPlayer.NickName);
+        Debug.LogFormat($"OnPlayerEnteredRoom() {newPlayer.NickName}");
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
-        int i = 0;
-        foreach (var pl in PhotonNetwork.PlayerList)
-        {
-            pl.ActorNumber = i ;
-        }
+        
+        // TODO: Check this, it's weird
+        // int i = 0;
+        // foreach (var pl in PhotonNetwork.PlayerList)
+        //     pl.ActorNumber = i ;
     }
 
     public void StartGame()
