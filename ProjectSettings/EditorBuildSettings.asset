@@ -32,5 +32,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Track/IA/City_AI.unity
     guid: c88136d7cf5f343048da0e880f90ed08
+  - enabled: 1
+    path: Assets/Scenes/Track/Multiplayer/MT_City.unity
+    guid: f58435ad6092951408b79f9774e065d4
+  - enabled: 1
+    path: Assets/Scenes/Track/Multiplayer/MT_Port.unity
+    guid: a499ceba0a465d7409684edcf23b2ad1
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9749da62c5bb4c048a8f7f8f3b2aee45, type: 2}

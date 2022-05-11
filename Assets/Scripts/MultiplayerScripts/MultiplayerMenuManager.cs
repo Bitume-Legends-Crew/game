@@ -22,26 +22,18 @@ public class MultiplayerMenuManager : MonoBehaviour
         for (int i = 0; i < _menus.Length; i++)
         {
             if (_menus[i].menuName == menuName)
-            {
                 _menus[i].Open();
-            }
 
             else if (_menus[i].open && _menus[i].menuName != "Background")
-            {
                 CloseMenu(_menus[i]);
-            }
         }
     }
 
     public void OpenMenu(Loader menu)
     {
         for (int i = 0; i < _menus.Length; i++)
-        {
             if (_menus[i].open && _menus[i].menuName != "Background")
-            {
                 CloseMenu(_menus[i]);
-            }
-        }
 
         menu.Open();
     }
