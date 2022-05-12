@@ -13,6 +13,7 @@ public class SoloMenu : MonoBehaviour
     public GameObject cityImage;
     public GameObject portImage;
     public static int Difficulty;
+    public GameObject loadingScreen;
 
     public void Back()
     {
@@ -63,7 +64,10 @@ public class SoloMenu : MonoBehaviour
     public void StarGame()
     {
         if (setDifficulty)
+        {
+            loadingScreen.SetActive(true);
             SceneManager.LoadScene(TrackList[i]);
+        }
 
         else
             error.SetActive(true);
