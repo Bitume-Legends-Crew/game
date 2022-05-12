@@ -15,13 +15,13 @@ public class RaceScript : MonoBehaviour
     }
 
     // If Hos Player Has Joined the Game
-    public static bool HostJoined()
-    {
-        if (PlayerList.Length == SpawnPlayers.spawnPositions.Length)
-            return true;
-
-        return false;
-    }
+    // public static bool HostJoined()
+    // {
+    //     if (PlayerList.Length == SpawnPlayers.spawnPositions.Length)
+    //         return true;
+    //
+    //     return false;
+    // }
 
     // To set the initial state of racce
     public static void Initialization()
