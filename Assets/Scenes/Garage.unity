@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -192,8 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7f2e858d126be4c86084532ee7044f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousButton: {fileID: 369966941}
-  nextButton: {fileID: 1470220940}
 --- !u!1 &96427985
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,17 +367,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8762830768379956772, guid: 2278788d785c8e641993956fda464ceb, type: 3}
   m_PrefabInstance: {fileID: 1415039716}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &369966941 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6516496668947052361, guid: 2278788d785c8e641993956fda464ceb, type: 3}
-  m_PrefabInstance: {fileID: 1415039716}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &737315551
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6516496668947052361, guid: 2278788d785c8e641993956fda464ceb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeCar
+      value: ChangeCar
       objectReference: {fileID: 0}
     - target: {fileID: 6516496668947052361, guid: 2278788d785c8e641993956fda464ceb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1230,7 +1217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6516496668947052361, guid: 2278788d785c8e641993956fda464ceb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: changeCar
+      value: ChangeCar
       objectReference: {fileID: 0}
     - target: {fileID: 6516496668947052361, guid: 2278788d785c8e641993956fda464ceb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1351,17 +1338,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8762830768379956772, guid: 2278788d785c8e641993956fda464ceb, type: 3}
   m_PrefabInstance: {fileID: 1470220938}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1470220940 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6516496668947052361, guid: 2278788d785c8e641993956fda464ceb, type: 3}
-  m_PrefabInstance: {fileID: 1470220938}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1478797457
 GameObject:
   m_ObjectHideFlags: 0

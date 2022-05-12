@@ -152,6 +152,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
+        MultiplayerMenuManager.Instance.OpenMenu("loading");
         // PhotonNetwork.LoadLevel(TrackPossible.MultiplayerTrack[Random.Range(0, TrackPossible.MultiplayerTrack.Count)]);
         PhotonNetwork.LoadLevel("MT_City");
     }

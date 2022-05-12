@@ -1,35 +1,41 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CarSelection : MonoBehaviour
 {
-    [SerializeField] private Button previousButton;
-    [SerializeField] private Button nextButton;
-    private int currentCar;
+    private int _currentCar;
 
     private void Start()
     {
-        currentCar = SaveManager.instance.currentCar;
-        SelectCar(currentCar);
+        _currentCar = SaveManager.instance.currentCar;
+        SelectCar(_currentCar);
     }
     
-     private void SelectCar(int _index)
+     private void SelectCar(int index)
     {
-        previousButton.interactable = (_index != 0);
-        nextButton.interactable = (_index != transform.childCount - 1);
-        
         for (int i = 0; i < transform.childCount; i++)
-        {
-            transform.GetChild(i).gameObject.SetActive(i == _index);
-        }
+            transform.GetChild(i).gameObject.SetActive(i == index % transform.childCount);
     }  
      
-    public void changeCar(int _change)
+    public void ChangeCar(int change)
     {
-        currentCar += _change;
+        _currentCar = (_currentCar + change) % transform.childCount;
         
-        SaveManager.instance.currentCar = currentCar;
+        if (_currentCar < 0)
+            _currentCar = transform.childCount - _currentCar;
+        
+        SaveManager.instance.currentCar = _currentCar;
         SaveManager.instance.Save();
-        SelectCar(currentCar);
+        SelectCar(_currentCar);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            ChangeCar(-1);
+        
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+            ChangeCar(1);
     }
 }

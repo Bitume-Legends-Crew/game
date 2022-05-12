@@ -10,6 +10,7 @@ public class TimerMenu : MonoBehaviour
     public GameObject error;
     public GameObject cityImage;
     public GameObject portImage;
+    public GameObject loadingScreen;
 
 
     public void Back()
@@ -58,7 +59,10 @@ public class TimerMenu : MonoBehaviour
     {
         // If difficulty Not set
         if (setDifficulty)
+        {
+            loadingScreen.SetActive(true);
             SceneManager.LoadScene(TrackList[i]);
+        }
 
         else
             error.SetActive(true);
