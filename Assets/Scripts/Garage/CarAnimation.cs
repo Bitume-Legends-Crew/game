@@ -2,21 +2,21 @@ using UnityEngine;
 
 public class CarAnimation : MonoBehaviour
 {
-    [SerializeField] private Vector3 FinalPosition;
-    private Vector3 initialPosition;
-    
+    private readonly Vector3 _finalPosition = new Vector3(569, 16.8f, 40);
+    private Vector3 _initialPosition;
+
     private void Awake()
     {
-        initialPosition = transform.position;
+        _initialPosition = transform.position;
     }
 
     private void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, FinalPosition, 0.1f);
+        transform.position = Vector3.Lerp(transform.position, _finalPosition, 0.1f);
     }
 
     private void OnDisable()
     {
-        transform.position = initialPosition;
+        transform.position = _initialPosition;
     }
 }
