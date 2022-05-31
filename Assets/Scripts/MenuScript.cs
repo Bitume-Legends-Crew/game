@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    public GameObject garage;
     public GameObject optionMenu;
     
     public void Timer()

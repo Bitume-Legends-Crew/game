@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 public class RoomManager : MonoBehaviourPunCallbacks
 {
     public static RoomManager Instance;
+    [SerializeField] private Transform[] spawnPositions;
+    public Transform[] SpawnPositions => spawnPositions;
 
     private void Awake()
     {
@@ -17,7 +19,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
             Destroy(gameObject);
             return;
         }
-        
+
         DontDestroyOnLoad(gameObject);
         Instance = this;
     }
@@ -32,7 +34,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         base.OnDisable();
         SceneManager.sceneLoaded -= OnSceneLoaded;
-
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
@@ -42,17 +43,5 @@ public class RoomManager : MonoBehaviourPunCallbacks
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero,
                 Quaternion.identity);
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

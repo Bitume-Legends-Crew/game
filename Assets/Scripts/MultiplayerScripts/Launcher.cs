@@ -143,16 +143,12 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         Debug.LogFormat($"OnPlayerEnteredRoom() {newPlayer.NickName}");
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(newPlayer);
-        
-        // TODO: Check this, it's weird
-        // int i = 0;
-        // foreach (var pl in PhotonNetwork.PlayerList)
-        //     pl.ActorNumber = i ;
     }
 
     public void StartGame()
     {
         MultiplayerMenuManager.Instance.OpenMenu("loading");
+        // TODO: Uncomment this line to choose a track
         // PhotonNetwork.LoadLevel(TrackPossible.MultiplayerTrack[Random.Range(0, TrackPossible.MultiplayerTrack.Count)]);
         PhotonNetwork.LoadLevel("MT_City");
     }
