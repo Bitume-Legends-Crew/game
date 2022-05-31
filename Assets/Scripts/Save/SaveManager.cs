@@ -9,6 +9,8 @@ public class SaveManager : MonoBehaviour
     
     // What we want to save
     public int currentCar;
+    public int currentLevel;
+    public int currentExp;
         
     private void Awake()
     {
@@ -30,6 +32,8 @@ public class SaveManager : MonoBehaviour
             PlayerData_Storage data = (PlayerData_Storage) bf.Deserialize(file);
 
             currentCar = data.currentCar;
+            currentExp = data.currentExp;
+            currentLevel = data.currentLevel;
             
             file.Close();
         }
@@ -39,9 +43,12 @@ public class SaveManager : MonoBehaviour
     {
         BinaryFormatter bf = new BinaryFormatter(); // To encrypt our Save
         FileStream file = File.Create(Application.persistentDataPath + "/playerinfo.dat"); // Directory of save
-        PlayerData_Storage data = new PlayerData_Storage();
-
-        data.currentCar = currentCar;
+        PlayerData_Storage data = new PlayerData_Storage
+        {
+            currentCar = this.currentCar,
+            currentExp = this.currentExp,
+            currentLevel = this.currentLevel
+        };
 
         bf.Serialize(file, data);
         file.Close();
@@ -52,5 +59,7 @@ public class SaveManager : MonoBehaviour
 class PlayerData_Storage
 {
     public int currentCar;
+    public int currentExp;
+    public int currentLevel;
 }
     
