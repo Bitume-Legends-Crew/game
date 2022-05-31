@@ -11,7 +11,7 @@ public class SpawnPlayers : MonoBehaviour {
     
     private void Start()
     {
-        Debug.Log(spawnPositions.Length);
+        Debug.LogFormat($"Lenght = {spawnPositions.Length}");
     }
     // public List<bool> _isFree = new List<bool>();
 
