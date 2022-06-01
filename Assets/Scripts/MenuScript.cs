@@ -33,5 +33,5 @@ public class MenuScript : MonoBehaviour
         => optionMenu.SetActive(true);
 
     private void Update()
-        => levelText.text = "Level " + SaveManager.instance.currentLevel.ToString();
+        => levelText.text = "Level ";
 }

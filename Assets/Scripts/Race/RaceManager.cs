@@ -34,26 +34,4 @@ public class RaceManager : MonoBehaviour
     }
 
     // EARN XP
-
-    public static void EarnXP()
-    {
-        if (GameEnded())
-        {
-            for (int i = 0; i < PlayerList.Length; i++)
-            {
-                RaceScript.playerTag = PlayerList[i].UserId;
-                if (i == 0)
-                    LevelSystem.AddExperience(100);
-
-                else if (i == 1)
-                    LevelSystem.AddExperience(85);
-
-                else if (i == 2)
-                    LevelSystem.AddExperience(65);
-
-                else
-                    LevelSystem.AddExperience(50);
-            }
-        }
-    }
 }
