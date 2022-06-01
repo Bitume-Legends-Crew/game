@@ -14,7 +14,7 @@ public class MenuScript : MonoBehaviour
         => SceneManager.LoadScene("Timer");
 
     public void Multiplayer()
-        => SceneManager.LoadScene("MT_Port");
+        => SceneManager.LoadScene("Lobby");
 
     public void Soloplayer()
         => SceneManager.LoadScene("Solo");

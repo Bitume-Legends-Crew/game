@@ -24,8 +24,7 @@ namespace Photon.Pun.UtilityScripts
     /// <summary>
     /// This component will instantiate a network GameObject when a room is joined
     /// </summary>
-    public class OnJoinedInstantiate : MonoBehaviour
-        , IMatchmakingCallbacks
+    public class OnJoinedInstantiate : MonoBehaviour, IMatchmakingCallbacks
     {
         public enum SpawnSequence { Connection, Random, RoundRobin }
 
@@ -168,7 +167,7 @@ namespace Photon.Pun.UtilityScripts
         }
 
 
-        public virtual void OnJoinedRoom()
+        public void Start()
         {
             // Only AutoSpawn if we are a new ActorId. Rejoining should reproduce the objects by server instantiation.
             if (AutoSpawnObjects && !PhotonNetwork.LocalPlayer.HasRejoined)
@@ -222,6 +221,8 @@ namespace Photon.Pun.UtilityScripts
         public virtual void OnFriendListUpdate(List<FriendInfo> friendList) { }
         public virtual void OnCreatedRoom() { }
         public virtual void OnCreateRoomFailed(short returnCode, string message) { }
+        public void OnJoinedRoom() { }
+
         public virtual void OnJoinRoomFailed(short returnCode, string message) { }
         public virtual void OnJoinRandomFailed(short returnCode, string message) { }
         public virtual void OnLeftRoom() { }

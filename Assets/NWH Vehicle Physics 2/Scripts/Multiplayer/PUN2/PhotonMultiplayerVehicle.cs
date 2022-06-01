@@ -12,8 +12,8 @@ namespace NWH.VehiclePhysics2.Multiplayer
     [RequireComponent(typeof(VehicleController))]
     public class PhotonMultiplayerVehicle : MonoBehaviour, IPunObservable
     {
-        public int sendRate = 25;
-        public int serializationRate = 25;
+        public int sendRate = 128;
+        public int serializationRate = 128;
         private PhotonRigidbodyView _photonRigidbodyView;
         private PhotonTransformView _photonTransformView;
         private PhotonView _photonView;
