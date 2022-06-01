@@ -43,12 +43,7 @@ public class SaveManager : MonoBehaviour
     {
         BinaryFormatter bf = new BinaryFormatter(); // To encrypt our Save
         FileStream file = File.Create(Application.persistentDataPath + "/playerinfo.dat"); // Directory of save
-        PlayerData_Storage data = new PlayerData_Storage
-        {
-            currentCar = this.currentCar,
-            currentExp = this.currentExp,
-            currentLevel = this.currentLevel
-        };
+        PlayerData_Storage data = new PlayerData_Storage(currentCar, currentExp, currentLevel);
 
         bf.Serialize(file, data);
         file.Close();
@@ -61,5 +56,12 @@ class PlayerData_Storage
     public int currentCar;
     public int currentExp;
     public int currentLevel;
+    
+    public PlayerData_Storage(int currentCar, int currentExp, int currentLevel)
+    {
+        this.currentCar = currentCar;
+        this.currentExp = currentExp;
+        this.currentLevel = currentLevel;
+    }
 }
     
