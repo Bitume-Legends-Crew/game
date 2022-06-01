@@ -64,6 +64,18 @@ public class TimerMode : MonoBehaviour
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
         Time.timeScale = 0f;
+        switch (SoloMenu.Difficulty)
+        {
+            case 1:
+                LevelSystem.AddExperience(5,2);
+                break;
+            case 2:
+                LevelSystem.AddExperience(7,2);
+                break;
+            case 3:
+                LevelSystem.AddExperience(10,2);
+                break;
+        }
     }
 
     public void Loose()
@@ -77,6 +89,18 @@ public class TimerMode : MonoBehaviour
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
         Time.timeScale = 0f;
+        switch (SoloMenu.Difficulty)
+        {
+            case 1:
+                LevelSystem.AddExperience(5,1);
+                break;
+            case 2:
+                LevelSystem.AddExperience(7,1);
+                break;
+            case 3:
+                LevelSystem.AddExperience(10,1);
+                break;
+        }
     }
 
     
