@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -58,6 +57,7 @@ public class Launcher : MonoBehaviourPunCallbacks
             return;
 
         PhotonNetwork.CreateRoom(createInput.text);
+        // level = Random.Range(9, 11);
         MultiplayerMenuManager.Instance.OpenMenu("loading");
     }
 
