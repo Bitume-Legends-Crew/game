@@ -14,6 +14,7 @@ public class PlayerMenu : MonoBehaviour
     {
         areYouSure.SetActive(false);
         SaveManager.instance.ResetGame();
+        Application.Quit();
     }
 
     public void AreYouSure()

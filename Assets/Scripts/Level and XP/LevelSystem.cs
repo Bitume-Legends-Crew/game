@@ -36,11 +36,9 @@ public class LevelSystem : MonoBehaviour
 
     public void AddExperience(bool isWon, float coef)
     {
-        int formerexp = _experience;
         _experience += (int) Math.Floor(_reward * coef * (isWon ? 1 : 0.5f));
         SaveManager.instance.currentExp = _experience;
         SaveManager.instance.Save();
-        // Debug.LogFormat($"former = {formerexp}, new exp = {_experience}");
     }
 
     public void UpLevel()

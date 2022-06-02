@@ -22,6 +22,7 @@ public class TimerMode : MonoBehaviour
     public GameObject ButtonRetry;
     public GameObject ButtonMenu;
     public GameObject ButtonBack;
+    private bool _isOnGame = true;
 
     private void Start()
     {
@@ -57,6 +58,7 @@ public class TimerMode : MonoBehaviour
 
     public void Win()
     {
+        _isOnGame = false;
         passedCheckpoint = 0;
         TextWin.SetActive(true);
         BackGroundWin.SetActive(true);
@@ -80,7 +82,7 @@ public class TimerMode : MonoBehaviour
 
     public void Loose()
     {
-        // timeAudio.Play();
+        _isOnGame = false;
         passedCheckpoint = 0;
         currentTime = 0;
         TextLoose.SetActive(true);
@@ -106,7 +108,7 @@ public class TimerMode : MonoBehaviour
 
     private void Update()
     {
-        if (CountDown.CountDownTimer == 0)
+        if (CountDown.CountDownTimer == 0 && _isOnGame)
         {
             currentTime -= 1 * Time.deltaTime;
             countDownText.text = "Remaining Time: " + currentTime.ToString("0") + " sec.";
