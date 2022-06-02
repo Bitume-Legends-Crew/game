@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -25,6 +26,12 @@ public class PauseMenu : MonoBehaviour
             else
                 Pause();
         }
+    }
+
+    public void Disconnect()
+    {
+        PhotonNetwork.Disconnect();
+        Menu();
     }
 
     public void Resume()

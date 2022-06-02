@@ -11,7 +11,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
-
 using Photon.Realtime;
 
 #if UNITY_EDITOR
@@ -180,40 +179,21 @@ namespace Photon.Pun.UtilityScripts
         {
             if (this.PrefabsToInstantiate != null)
             {
-                foreach (GameObject o in this.PrefabsToInstantiate)
+                for (var index = 0; index < this.PrefabsToInstantiate.Count; index++)
                 {
+                    GameObject o = this.PrefabsToInstantiate[index];
                     if (o == null)
                         continue;
 #if UNITY_EDITOR
                     Debug.Log("Auto-Instantiating: " + o.name);
 #endif
-                    Vector3 spawnPos; Quaternion spawnRot;
+                    Vector3 spawnPos;
+                    Quaternion spawnRot;
                     GetSpawnPoint(out spawnPos, out spawnRot);
-
-
+                    
+                    // if (index == SaveManager.)
                     var newobj = PhotonNetwork.Instantiate(o.name, spawnPos, spawnRot, 0);
                     SpawnedObjects.Push(newobj);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Destroy all objects that have been spawned by this component for this client.
-        /// </summary>
-        /// <param name="localOnly">Use Object.Destroy rather than PhotonNetwork.Destroy.</param>
-        public virtual void DespawnObjects(bool localOnly)
-        {
-
-            while (SpawnedObjects.Count > 0)
-            {
-                var go = SpawnedObjects.Pop();
-                if (go)
-                {
-                    if (localOnly)
-                        Object.Destroy(go);
-                    else
-                        PhotonNetwork.Destroy(go);
-
                 }
             }
         }
