@@ -1475,6 +1475,7 @@ GameObject:
   - component: {fileID: 4849129283404006043}
   - component: {fileID: 1719562075332528109}
   - component: {fileID: 5922989516741727762}
+  - component: {fileID: 4060801009766514402}
   m_Layer: 2
   m_Name: Punto-Chantier
   m_TagString: Vehicle
@@ -2453,7 +2454,10 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 4849129283404006043}
+  - {fileID: 1719562075332528109}
+  - {fileID: 5922989516741727762}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -2503,6 +2507,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sendRate: 25
   serializationRate: 25
+--- !u!114 &4060801009766514402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757351938416287305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47fa430f26ec86e429998f784e11035a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TxtSpeed: {fileID: 7226660744172998291, guid: 1a6dcb147f45a43b5b9923ad5b4a4b58, type: 3}
+  isMP: 1
+  Canvas: {fileID: 7226660744172998288, guid: 1a6dcb147f45a43b5b9923ad5b4a4b58, type: 3}
 --- !u!1 &3757394470595605709
 GameObject:
   m_ObjectHideFlags: 0
