@@ -14,7 +14,7 @@ public class LevelSystem : MonoBehaviour
     private float _thresholdSup;
     private float _thresholdInf;
     private int _level;
-    private int _reward;
+    private readonly int _reward = 10;
 
     public int Level => _level;
     public float ThresholdInf => _thresholdInf;

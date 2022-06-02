@@ -10,6 +10,7 @@ public class TimerMode : MonoBehaviour
     private float currentTime = 0f;
     public static float startingTime;
     public Text countDownText;
+
     public BoxCollider[] Checkpoint;
     // public AudioSource timeAudio;
     // public GameObject Car;
@@ -31,32 +32,31 @@ public class TimerMode : MonoBehaviour
         LastCheckpoint.PassedLastCheckpointPlayer = false;
         LastCheckpoint.PassedLastCheckpointPlayer = false;
     }
-    
+
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
         Start();
     }
-    
+
     public void Menu()
     {
         SceneManager.LoadScene("Scenes/Menu");
         Time.timeScale = 1f;
         Start();
     }
-    
+
     public void BackMenu()
     {
         SceneManager.LoadScene("Scenes/Menu");
         Time.timeScale = 1f;
         Start();
     }
-    
+
 
     public void Win()
     {
-        // timeAudio.Play();
         passedCheckpoint = 0;
         TextWin.SetActive(true);
         BackGroundWin.SetActive(true);
@@ -64,16 +64,16 @@ public class TimerMode : MonoBehaviour
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
         Time.timeScale = 0f;
-        switch (SoloMenu.Difficulty)
+        switch (startingTime)
         {
-            case 1:
-                LevelSystem.instance.AddExperience(true,1f);
+            case 90f:
+                LevelSystem.instance.AddExperience(true, 1f);
                 break;
-            case 2:
-                LevelSystem.instance.AddExperience(true,1.5f);
+            case 70f:
+                LevelSystem.instance.AddExperience(true, 1.5f);
                 break;
-            case 3:
-                LevelSystem.instance.AddExperience(true,2f);
+            case 63f:
+                LevelSystem.instance.AddExperience(true, 2f);
                 break;
         }
     }
@@ -89,40 +89,34 @@ public class TimerMode : MonoBehaviour
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
         Time.timeScale = 0f;
-        switch (SoloMenu.Difficulty)
+        switch (startingTime)
         {
-            case 1:
-                LevelSystem.instance.AddExperience(false,1f);
+            case 90f:
+                LevelSystem.instance.AddExperience(false, 1f);
                 break;
-            case 2:
-                LevelSystem.instance.AddExperience(false,1.5f);
+            case 70f:
+                LevelSystem.instance.AddExperience(false, 1.5f);
                 break;
-            case 3:
-                LevelSystem.instance.AddExperience(false,2f);
+            case 63f:
+                LevelSystem.instance.AddExperience(false, 2f);
                 break;
         }
     }
 
-    
 
     private void Update()
     {
         if (CountDown.CountDownTimer == 0)
         {
-            Debug.Log(passedCheckpoint);
-            
             currentTime -= 1 * Time.deltaTime;
             countDownText.text = "Remaining Time: " + currentTime.ToString("0") + " sec.";
 
             if (currentTime <= 0)
-            {
                 Loose();
-            }
-            
-            else if (currentTime >= 0 && LastCheckpoint.PassedLastCheckpointPlayer && passedCheckpoint >= Checkpoint.Length + 1)
-            {
+
+            else if (currentTime >= 0 && LastCheckpoint.PassedLastCheckpointPlayer &&
+                     passedCheckpoint >= Checkpoint.Length + 1)
                 Win();
-            }
         }
     }
 }
