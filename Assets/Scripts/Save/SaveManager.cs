@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour
@@ -21,6 +22,11 @@ public class SaveManager : MonoBehaviour
         
         DontDestroyOnLoad(gameObject); // It doesn't get destroyed so can Save
         Load();
+    }
+
+    public void ResetGame()
+    {
+        File.Delete(Application.persistentDataPath + "/playerinfo.dat");
     }
 
     public void Load()

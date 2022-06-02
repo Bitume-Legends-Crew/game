@@ -1,62 +1,55 @@
+using System;
 using System.Collections.Generic;
 using Photon.Realtime;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Networking.Types;
+using UnityEngine.UI;
 
 public class LevelSystem : MonoBehaviour
 {
     public static LevelSystem instance;
-
-    public static TextMeshProUGUI uiLevelText;
     
-    // A peut être mettre en private ?
-    public static int experience;
-    public static int experienceToNextLevel = 200;
+    private int _experience;
+    private float _thresholdSup;
+    private float _thresholdInf;
+    private int _level;
+    private int _reward;
+
+    public int Level => _level;
+    public float ThresholdInf => _thresholdInf;
+    public float ThresholdSup => _thresholdSup;
+    public int Experience => _experience;
 
     public void Awake()
     {
         if (instance != null)
-        {
-            Debug.Log("More than one LevelSystem in scene!");
             return;
-        }
 
         instance = this;
-
-        SetLevel(SaveManager.instance.currentLevel);
+        
+        _experience = SaveManager.instance.currentExp;
+        _level = SaveManager.instance.currentLevel;
+        _thresholdInf = (float) ((int) Math.Pow(2, _level - 1)) * 100;
+        _thresholdSup = (float) Math.Pow(2, _level) * 100;
     }
 
-    public static void AddExperience(int experienceToAdd, int multiplicator)
+    public void AddExperience(bool isWon, float coef)
     {
-        int formerexp = experience;
-        experience += experienceToAdd * multiplicator;
-        if (experience >= experienceToNextLevel)
-        {
-            SetLevel(SaveManager.instance.currentLevel + 1);
-            experienceToNextLevel *= 2;
-            NewLevel();
-        }
-        UpdateVisual();
-        Debug.LogFormat($"former = {formerexp}, new exp = {experience}");
+        int formerexp = _experience;
+        _experience += (int) Math.Floor(_reward * coef * (isWon ? 1 : 0.5f));
+        SaveManager.instance.currentExp = _experience;
+        SaveManager.instance.Save();
+        // Debug.LogFormat($"former = {formerexp}, new exp = {_experience}");
     }
 
-    public static void NewLevel()
+    public void UpLevel()
     {
-        //TODO OpenPanel On Menu
-    }
-
-    public static void SetLevel(int value)
-    {
-        SaveManager.instance.currentLevel = value;
-        experience = experience - experienceToNextLevel;
-        experienceToNextLevel = (int)(50f * (Mathf.Pow(SaveManager.instance.currentLevel + 1, 2) - (5 * (SaveManager.instance.currentLevel + 1)) + 8));
-        UpdateVisual();
-    }
-
-    public static void UpdateVisual()
-    {
-        uiLevelText.SetText(SaveManager.instance.currentLevel.ToString("0") + "\nto next lvl: " + experienceToNextLevel + "\ncurrent exp: " + experience);
+        _thresholdInf = _thresholdSup;
+        _level++;
+        _thresholdSup = (float) Math.Pow(2, _level) * 100;
+        SaveManager.instance.currentLevel = _level;
+        SaveManager.instance.Save();
     }
 }
 

@@ -83,13 +83,13 @@ public class SoloScript : MonoBehaviour
         switch (SoloMenu.Difficulty)
         {
             case 1:
-                LevelSystem.AddExperience(5,2);
+                LevelSystem.instance.AddExperience(true,1f);
                 break;
             case 2:
-                LevelSystem.AddExperience(7,2);
+                LevelSystem.instance.AddExperience(true,1.5f);
                 break;
             case 3:
-                LevelSystem.AddExperience(10,2);
+                LevelSystem.instance.AddExperience(true,2f);
                 break;
         }
     }
@@ -108,13 +108,13 @@ public class SoloScript : MonoBehaviour
         switch (SoloMenu.Difficulty)
         {
             case 1:
-                LevelSystem.AddExperience(5,1);
+                LevelSystem.instance.AddExperience(false,1f);
                 break;
             case 2:
-                LevelSystem.AddExperience(7,1);
+                LevelSystem.instance.AddExperience(false,1.5f);
                 break;
             case 3:
-                LevelSystem.AddExperience(10,1);
+                LevelSystem.instance.AddExperience(false,2f);
                 break;
         }
     }
