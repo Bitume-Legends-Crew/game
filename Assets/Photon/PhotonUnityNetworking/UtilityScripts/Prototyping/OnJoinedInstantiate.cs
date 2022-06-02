@@ -191,7 +191,6 @@ namespace Photon.Pun.UtilityScripts
                     Quaternion spawnRot;
                     GetSpawnPoint(out spawnPos, out spawnRot);
                     
-                    // if (index == SaveManager.)
                     var newobj = PhotonNetwork.Instantiate(o.name, spawnPos, spawnRot, 0);
                     SpawnedObjects.Push(newobj);
                 }

@@ -17,6 +17,7 @@ public class SoloScript : MonoBehaviour
     public GameObject Easy_AI;
     public GameObject Medium_AI;
     public GameObject Hard_AI;
+    private bool _isOnGame = true;
     
     
     
@@ -72,7 +73,7 @@ public class SoloScript : MonoBehaviour
 
     public void Win()
     {
-        // timeAudio.Play();
+        _isOnGame = false;
         passedCheckpoint = 0;
         TextWin.SetActive(true);
         BackGroundWin.SetActive(true);
@@ -96,7 +97,7 @@ public class SoloScript : MonoBehaviour
 
     public void Loose()
     {
-        // timeAudio.Play();
+        _isOnGame = false;
         passedCheckpoint = 0;
         currentTime = 0;
         TextLoose.SetActive(true);
@@ -122,13 +123,13 @@ public class SoloScript : MonoBehaviour
     private void Update()
     {
         
-        if (LastCheckpointIA.PassedLastCheckpointIA)
+        if (LastCheckpointIA.PassedLastCheckpointIA && _isOnGame)
         {
             Loose();
             Time.timeScale = 0f;
         }
         
-        if (passedCheckpoint >= Checkpoint.Length + 1 && LastCheckpoint.PassedLastCheckpointPlayer)
+        if (passedCheckpoint >= Checkpoint.Length + 1 && LastCheckpoint.PassedLastCheckpointPlayer && _isOnGame)
         {
             Win();
             Time.timeScale = 0f;
