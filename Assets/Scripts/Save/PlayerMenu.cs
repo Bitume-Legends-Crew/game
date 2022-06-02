@@ -19,25 +19,22 @@ public class PlayerMenu : MonoBehaviour
 
     public void AreYouSure()
         => areYouSure.SetActive(true);
-    
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         levelText.text = LevelSystem.instance.Level.ToString();
         experienceText.text = LevelSystem.instance.Experience.ToString();
     }
-    
+
     public void BackToMenu()
     {
         panel.SetActive(false);
         areYouSure.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.Escape))
-           BackToMenu();
+        if (Input.GetKeyDown(KeyCode.Escape))
+            BackToMenu();
     }
 }

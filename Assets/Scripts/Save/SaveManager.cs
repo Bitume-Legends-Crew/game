@@ -19,14 +19,13 @@ public class SaveManager : MonoBehaviour
         else
             instance = this;
         
-        DontDestroyOnLoad(gameObject); // It doesn't get destroyed so can Save
+        DontDestroyOnLoad(gameObject);
         Load();
     }
 
     public void ResetGame()
-    {
-        File.Delete(Application.persistentDataPath + "/playerinfo.dat");
-    }
+        => File.Delete(Application.persistentDataPath + "/playerinfo.dat");
+    
 
     public void Load()
     {
