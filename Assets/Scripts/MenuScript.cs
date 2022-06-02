@@ -61,6 +61,9 @@ public class MenuScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             BackToMenu();
+        if (LevelSystem.instance.Experience >= LevelSystem.instance.ThresholdSup)
+            LevelUp();
+        InitSlider();
     }
 
     private void Start()
@@ -68,9 +71,6 @@ public class MenuScript : MonoBehaviour
         levelText.text = "Level " + LevelSystem.instance.Level;
         levelUp.SetActive(false);
         optionMenu.SetActive(false);
-        if (LevelSystem.instance.Experience >= LevelSystem.instance.ThresholdSup)
-            LevelUp();
-        InitSlider();
     }
 
     public void BackToMenu()

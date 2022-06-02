@@ -24,7 +24,6 @@ public class SoloMenu : MonoBehaviour
     public void DifficultyEasy()
     {
         // Load Easy Difficulty with I.A.
-        Debug.LogFormat($"You press the simple level for AI");
         setDifficulty = true;
         Difficulty = 1;
     }
@@ -32,7 +31,6 @@ public class SoloMenu : MonoBehaviour
     public void DifficultyMedium()
     {
         // Load Medium Difficulty with I.A.
-        Debug.LogFormat($"You press the medium level for AI");
         setDifficulty = true;
         Difficulty = 2;
     }
@@ -40,7 +38,6 @@ public class SoloMenu : MonoBehaviour
     public void DifficultHard()
     {
         // Load Hard Difficulty with I.A.
-        Debug.LogFormat($"You press the hard level for AI");
         setDifficulty = true;
         Difficulty = 3;
     }
