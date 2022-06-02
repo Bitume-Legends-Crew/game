@@ -8,15 +8,17 @@ public class PlayerMenu : MonoBehaviour
     public Text levelText;
     public Text experienceText;
     public GameObject panel;
-    public GameObject messageAfterReset;
     public GameObject areYouSure;
 
     public void ResetGame()
     {
         areYouSure.SetActive(false);
         SaveManager.instance.ResetGame();
-        messageAfterReset.SetActive(true);
     }
+
+    public void AreYouSure()
+        => areYouSure.SetActive(true);
+    
     
     // Start is called before the first frame update
     void Start()
@@ -27,8 +29,8 @@ public class PlayerMenu : MonoBehaviour
     
     public void BackToMenu()
     {
-        messageAfterReset.SetActive(false);
         panel.SetActive(false);
+        areYouSure.SetActive(false);
     }
 
     // Update is called once per frame

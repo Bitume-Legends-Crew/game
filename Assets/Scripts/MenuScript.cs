@@ -12,6 +12,7 @@ public class MenuScript : MonoBehaviour
     public GameObject levelUp;
     public Slider expLevel;
     public Text levelUpText;
+    public GameObject playerMenu;
 
     public void Timer()
         => SceneManager.LoadScene("Timer");
@@ -34,6 +35,9 @@ public class MenuScript : MonoBehaviour
 
     public void OpenOptions()
         => optionMenu.SetActive(true);
+
+    public void PlayerMenu()
+        => playerMenu.SetActive(true);
 
     private void LevelUp()
     {

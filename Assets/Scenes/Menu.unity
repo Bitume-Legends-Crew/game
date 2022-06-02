@@ -1177,6 +1177,7 @@ MonoBehaviour:
   levelUp: {fileID: 1328537970}
   expLevel: {fileID: 1324818731}
   levelUpText: {fileID: 1901110809}
+  playerMenu: {fileID: 2024533035}
 --- !u!1 &284169894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,7 +1304,7 @@ GameObject:
   - component: {fileID: 343961180}
   - component: {fileID: 343961179}
   m_Layer: 5
-  m_Name: Display Unit
+  m_Name: PlayerStatsUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4180,9 +4181,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
-        m_MethodName: BackToMenu
+      - m_Target: {fileID: 2024533040}
+        m_TargetAssemblyTypeName: PlayerMenu, Assembly-CSharp
+        m_MethodName: AreYouSure
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5568,6 +5569,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 273750670}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+        m_MethodName: PlayerMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1468192943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6667,7 +6680,7 @@ GameObject:
   - component: {fileID: 1682281782}
   - component: {fileID: 1682281781}
   m_Layer: 5
-  m_Name: DangerZone
+  m_Name: DangerZoneUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8142,7 +8155,6 @@ MonoBehaviour:
   levelText: {fileID: 1221476582}
   experienceText: {fileID: 970894124}
   panel: {fileID: 2024533035}
-  messageAfterReset: {fileID: 0}
   areYouSure: {fileID: 1585701031}
 --- !u!1 &2057492704
 GameObject:

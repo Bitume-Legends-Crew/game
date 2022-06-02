@@ -23,9 +23,6 @@ public class LevelSystem : MonoBehaviour
 
     public void Awake()
     {
-        SaveManager.instance.currentExp = 0;
-        SaveManager.instance.currentLevel = 0;
-        
         if (instance != null)
             return;
 
