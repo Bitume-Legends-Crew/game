@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Photon.Pun.UtilityScripts;
 
 public class MenuScript : MonoBehaviour
 {
@@ -18,7 +19,10 @@ public class MenuScript : MonoBehaviour
         => SceneManager.LoadScene("Timer");
 
     public void Multiplayer()
-        => SceneManager.LoadScene("Lobby");
+    {
+        SceneManager.LoadScene("Lobby");
+        OnJoinedInstantiate.CurrentCar = SaveManager.instance.currentCar;
+    }
 
     public void Soloplayer()
         => SceneManager.LoadScene("Solo");

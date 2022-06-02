@@ -8,10 +8,14 @@
 // <author>developer@exitgames.com</author>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Photon.Realtime;
+using Random = UnityEngine.Random;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -19,7 +23,6 @@ using UnityEditor;
 
 namespace Photon.Pun.UtilityScripts
 {
-
     /// <summary>
     /// This component will instantiate a network GameObject when a room is joined
     /// </summary>
@@ -51,6 +54,8 @@ namespace Photon.Pun.UtilityScripts
         [FormerlySerializedAs("autoSpawnObjects")]
         [HideInInspector] public bool AutoSpawnObjects = true;
 
+        public static int CurrentCar;
+
         #endregion
 
         // Record of spawned objects, used for Despawn All
@@ -63,7 +68,7 @@ namespace Photon.Pun.UtilityScripts
 
         protected void OnValidate()
         {
-            /// Check the prefab to make sure it is the actual resource, and not a scene object or other instance.
+            // Check the prefab to make sure it is the actual resource, and not a scene object or other instance.
             if (PrefabsToInstantiate != null)
                 for (int i = 0; i < PrefabsToInstantiate.Count; ++i)
                 {
@@ -72,7 +77,7 @@ namespace Photon.Pun.UtilityScripts
                         PrefabsToInstantiate[i] = ValidatePrefab(prefab);
                 }
 
-            /// Move any values from old SpawnPosition field to new SpawnPoints
+            // Move any values from old SpawnPosition field to new SpawnPoints
             if (SpawnPosition)
             {
                 if (SpawnPoints == null)
@@ -156,29 +161,23 @@ namespace Photon.Pun.UtilityScripts
 
 
         public virtual void OnEnable()
-        {
-            PhotonNetwork.AddCallbackTarget(this);
-        }
+            => PhotonNetwork.AddCallbackTarget(this);
 
         public virtual void OnDisable()
-        {
-            PhotonNetwork.RemoveCallbackTarget(this);
-        }
-
+            => PhotonNetwork.RemoveCallbackTarget(this);
 
         public void Start()
         {
             // Only AutoSpawn if we are a new ActorId. Rejoining should reproduce the objects by server instantiation.
             if (AutoSpawnObjects && !PhotonNetwork.LocalPlayer.HasRejoined)
-            {
                 SpawnObjects();
-            }
         }
 
         public virtual void SpawnObjects()
         {
             if (this.PrefabsToInstantiate != null)
             {
+                Debug.Log("currentCar = " + CurrentCar);
                 for (var index = 0; index < this.PrefabsToInstantiate.Count; index++)
                 {
                     GameObject o = this.PrefabsToInstantiate[index];
@@ -190,9 +189,11 @@ namespace Photon.Pun.UtilityScripts
                     Vector3 spawnPos;
                     Quaternion spawnRot;
                     GetSpawnPoint(out spawnPos, out spawnRot);
-                    
-                    var newobj = PhotonNetwork.Instantiate(o.name, spawnPos, spawnRot, 0);
-                    SpawnedObjects.Push(newobj);
+                    if (index == CurrentCar)
+                    {
+                        var newobj = PhotonNetwork.Instantiate(o.name, spawnPos, spawnRot, 0);
+                        SpawnedObjects.Push(newobj);
+                    }
                 }
             }
         }
@@ -331,7 +332,7 @@ namespace Photon.Pun.UtilityScripts
 
             EditableReferenceList(SpawnPoints, new GUIContent(SpawnPoints.displayName, SpawnPoints.tooltip), fieldBox);
 
-            /// Spawn Pattern
+            // Spawn Pattern
             EditorGUILayout.BeginVertical(fieldBox);
             EditorGUILayout.PropertyField(Sequence);
             EditorGUILayout.PropertyField(UseRandomOffset);
@@ -342,7 +343,7 @@ namespace Photon.Pun.UtilityScripts
             }
             EditorGUILayout.EndVertical();
 
-            /// Auto/Manual Spawn
+            // Auto/Manual Spawn
             EditorGUILayout.BeginVertical(fieldBox);
             EditorGUILayout.PropertyField(autoSpawnObjects);
             EditorGUILayout.EndVertical();
