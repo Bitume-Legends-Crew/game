@@ -45,6 +45,7 @@ public class MultiScript : MonoBehaviour
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
         Time.timeScale = 0f;
+        LevelSystem.instance.AddExperience(true,2f);
         
         //XP EARNING
     }
@@ -59,6 +60,7 @@ public class MultiScript : MonoBehaviour
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
         Time.timeScale = 0f;
+        LevelSystem.instance.AddExperience(false,2f);
         
         //XP EARNING
     }
