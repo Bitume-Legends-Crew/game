@@ -12,6 +12,7 @@ public class PassedCheckpoints : MonoBehaviour
         {
             TimerMode.passedCheckpoint = TimerMode.passedCheckpoint + 1;
             SoloScript.passedCheckpoint = SoloScript.passedCheckpoint + 1;
+            MultiScript.passedCheckpoint = MultiScript.passedCheckpoint + 1;
         }
     }
 }
