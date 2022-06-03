@@ -17,13 +17,21 @@ public class MultiScript : MonoBehaviour
     public GameObject ButtonMenu;
     public GameObject ButtonBack;
 
+    public GameObject[] player;
+    
     private void Start()
     {
-        CountDown.CountDownTimer = 5;
-        passedCheckpoint = 0;
-        Destroy(MusicHandler.musicObj[0]);
-        LastCheckpoint.PassedLastCheckpointPlayer = false;
-        LastCheckpoint.PassedLastCheckpointPlayer = false;
+        
+        player = GameObject.FindGameObjectsWithTag("Vehicle");
+        if (PhotonNetwork.CurrentRoom.Players.Count == player.Length)
+        {
+            CountDown.CountDownTimer = 5;
+            passedCheckpoint = 0;
+            Destroy(MusicHandler.musicObj[0]);
+            LastCheckpoint.PassedLastCheckpointPlayer = false;
+            LastCheckpoint.PassedLastCheckpointPlayer = false;
+        }
+        
     }
 
     public void Menu()
@@ -69,11 +77,16 @@ public class MultiScript : MonoBehaviour
 
     private void Update()
     {
+        if (PhotonNetwork.CurrentRoom.Players.Count != player.Length) // If not every players have join the game
+        {
+            Start();
+        }
+        
         if (CountDown.CountDownTimer == 0)
         {
             Debug.Log(passedCheckpoint);
 
-            if (LastCheckpoint.PassedLastCheckpointPlayer && passedCheckpoint >= Checkpoint.Length + 1)
+            if (LastCheckpoint.PassedLastCheckpointPlayer && passedCheckpoint == Checkpoint.Length)
             {
                 Win();
             }
