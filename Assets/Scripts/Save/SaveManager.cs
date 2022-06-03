@@ -11,6 +11,8 @@ public class SaveManager : MonoBehaviour
     public int currentCar;
     public int currentLevel;
     public int currentExp;
+    public float volumeMusic;
+    public float volumeCars;
         
     private void Awake()
     {
@@ -38,7 +40,8 @@ public class SaveManager : MonoBehaviour
             currentCar = data.currentCar;
             currentExp = data.currentExp;
             currentLevel = data.currentLevel;
-            
+            volumeMusic = data.volumeMusic;
+            volumeCars = data.volumeCars;
             file.Close();
         }
     }
@@ -47,7 +50,7 @@ public class SaveManager : MonoBehaviour
     {
         BinaryFormatter bf = new BinaryFormatter(); // To encrypt our Save
         FileStream file = File.Create(Application.persistentDataPath + "/playerinfo.dat"); // Directory of save
-        PlayerData_Storage data = new PlayerData_Storage(currentCar, currentExp, currentLevel);
+        PlayerData_Storage data = new PlayerData_Storage(currentCar, currentExp, currentLevel, volumeMusic, volumeCars);
 
         bf.Serialize(file, data);
         file.Close();
@@ -60,12 +63,16 @@ class PlayerData_Storage
     public int currentCar;
     public int currentExp;
     public int currentLevel;
+    public float volumeMusic;
+    public float volumeCars;
     
-    public PlayerData_Storage(int currentCar, int currentExp, int currentLevel)
+    public PlayerData_Storage(int currentCar, int currentExp, int currentLevel, float volumeMusic, float volumeCars)
     {
         this.currentCar = currentCar;
         this.currentExp = currentExp;
         this.currentLevel = currentLevel;
+        this.volumeMusic = volumeMusic;
+        this.volumeCars = volumeCars;
     }
 }
     
