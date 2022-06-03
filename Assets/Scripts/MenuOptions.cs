@@ -23,6 +23,10 @@ public class MenuOptions : MonoBehaviour
     public AudioMixer audioMixer;
     private Resolution[] _resolutions;
     public Dropdown resolutionDropdown;
+    private float musicVolume;
+    private float carsVolume;
+    public Slider sliderMusic;
+    public Slider sliderFX;
 
     private void Start()
     {
@@ -41,6 +45,8 @@ public class MenuOptions : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+        sliderMusic.value = SaveManager.instance.volumeMusic;
+        sliderFX.value = SaveManager.instance.volumeCars;
     }
 
     private void Update()
@@ -54,9 +60,15 @@ public class MenuOptions : MonoBehaviour
         panelOptions.SetActive(false);
     }
 
-    public void SetVolumeMusic(float volume)
+    public void SetVolumeMusic()
     {
-        audioMixer.SetFloat("volume", volume);
+        //audioMixer.SetFloat("MusicVolume", volume);
+        SaveManager.instance.volumeMusic = Mathf.Log10(sliderMusic.value) * 40;
+    }
+    public void SetVolumeCars()
+    {
+        //audioMixer.SetFloat("MusicVolume", volume);
+        SaveManager.instance.volumeMusic = Mathf.Log10(sliderFX.value) * 40;
     }
 
     public void SetQuality(int qualityIndex)
