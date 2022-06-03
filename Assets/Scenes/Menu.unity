@@ -2291,6 +2291,8 @@ MonoBehaviour:
   panelOptions: {fileID: 719329614}
   audioMixer: {fileID: 0}
   resolutionDropdown: {fileID: 1655343737}
+  sliderMusic: {fileID: 0}
+  sliderFX: {fileID: 0}
 --- !u!114 &719329617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3852,8 +3854,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4619999780533498062, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
+      propertyPath: m_Value
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619999780533498062, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
       propertyPath: m_MinValue
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619999780533498062, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619999780533498062, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 719329616}
+    - target: {fileID: 4619999780533498062, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetVolumeMusic
       objectReference: {fileID: 0}
     - target: {fileID: 4619999781262711132, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3870,17 +3888,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4619999780533498061, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
   m_PrefabInstance: {fileID: 1029035519}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1029035521 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4619999780533498062, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
-  m_PrefabInstance: {fileID: 1029035519}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1041633743
 GameObject:
   m_ObjectHideFlags: 0
@@ -3973,7 +3980,6 @@ GameObject:
   - component: {fileID: 1128556374}
   - component: {fileID: 1128556373}
   - component: {fileID: 1128556376}
-  - component: {fileID: 1128556377}
   m_Layer: 0
   m_Name: MusicMenu
   m_TagString: MusicMenu
@@ -4116,20 +4122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cae0d3a94ca9354eaf4b81afbbcab64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSlider: {fileID: 1029035521}
   mixer: {fileID: 24100000, guid: 48b2b108b1b0b9746882cc27fd311dc6, type: 2}
---- !u!114 &1128556377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128556372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea87c7456d39f34ba487d2bc09ac995, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1131671071
 GameObject:
   m_ObjectHideFlags: 0
@@ -8749,9 +8742,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4619999780533498062, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619999780533498062, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 719329616}
+    - target: {fileID: 4619999780533498062, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetVolumeCars
+      objectReference: {fileID: 0}
     - target: {fileID: 4619999781262711132, guid: 09eb198775e9d4c5287e637e917e206d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
