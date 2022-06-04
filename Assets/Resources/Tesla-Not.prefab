@@ -5601,7 +5601,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2964412958421897838}
   serializedVersion: 2
-  m_Mass: 1400
+  m_Mass: 1500
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -5911,7 +5911,7 @@ MonoBehaviour:
       engineType: 0
       forcedInduction:
         boost: 0
-        forcedInductionType: 0
+        forcedInductionType: 1
         hasWastegate: 1
         linearity: 0.7
         powerGainMultiplier: 1.4
@@ -5925,7 +5925,7 @@ MonoBehaviour:
       isStalling: 0
       lossTorque: 0
       maxLossTorque: 300
-      maxPower: 120
+      maxPower: 200
       maxRPM: 5000
       minRPM: -50
       OnRevLimiter:
@@ -5983,7 +5983,7 @@ MonoBehaviour:
       revLimiterActive: 0
       revLimiterCutoffDuration: 0.02
       revLimiterEnabled: 1
-      revLimiterRPM: 4700
+      revLimiterRPM: 5500
       shiftSignal: 0
       slipTorque: 9999
       stallingEnabled: 1
@@ -6184,12 +6184,12 @@ MonoBehaviour:
       basePitch: 0.4
       baseVolume: 0.2
       clips:
-      - {fileID: 8300000, guid: 26fb7228b0cb3b1428a016e1157efe13, type: 3}
+      - {fileID: 8300000, guid: c815228a2aa8b3a4b99f5603263bb39d, type: 3}
       container: {fileID: 0}
-      maxDistortion: 0.4
-      pitchRange: 2.5
+      maxDistortion: 0.3
+      pitchRange: 2
       smoothing: 0.05
-      volumeRange: 0.1
+      volumeRange: 0.15
     engineSourceGO: {fileID: 0}
     engineStartComponent:
       state:
@@ -6301,7 +6301,7 @@ MonoBehaviour:
         name: 
       audioMixerGroup: {fileID: 0}
       basePitch: 1
-      baseVolume: 0.1
+      baseVolume: 0.05
       clips:
       - {fileID: 8300000, guid: fbc3347e118773e409df0b1d95db697e, type: 3}
       container: {fileID: 0}
@@ -6424,7 +6424,7 @@ MonoBehaviour:
   transmissionPosition: {x: 0, y: 0.2, z: 0.2}
   freezeWhenAsleep: 1
   constrainWhenAsleep: 0
-  mass: 1400
+  mass: 1500
   maxAngularVelocity: 8
   drag: 0
   angularDrag: 0
