@@ -3904,7 +3904,7 @@ MonoBehaviour:
       _downshiftRPM: 1400
       _targetDownshiftRPM: 0
       _targetUpshiftRPM: 0
-      _transmissionType: 2
+      _transmissionType: 1
       _upshiftRPM: 2800
       clutchEngaged: 0
       externalShiftChecksValid: 1
