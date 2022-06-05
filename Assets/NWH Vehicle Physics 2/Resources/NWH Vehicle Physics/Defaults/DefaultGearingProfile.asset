@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DefaultGearingProfile
   m_EditorClassIdentifier: 
   forwardGears:
-  - 8
-  - 5.5
+  - 5
   - 4
-  - 1.7
+  - 3
+  - 2
   reverseGears:
   - -5

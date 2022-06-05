@@ -3295,8 +3295,8 @@ MonoBehaviour:
       ignition: 1
       isStalling: 0
       lossTorque: 0
-      maxLossTorque: 300
-      maxPower: 350
+      maxLossTorque: 450
+      maxPower: 450
       maxRPM: 5000
       minRPM: -50
       OnRevLimiter:
@@ -3308,7 +3308,7 @@ MonoBehaviour:
       OnStop:
         m_PersistentCalls:
           m_Calls: []
-      flyingStartEnabled: 0
+      flyingStartEnabled: 1
       powerCurve:
         serializedVersion: 2
         m_Curve:
@@ -3316,14 +3316,14 @@ MonoBehaviour:
           time: 0
           value: 0
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.3
-          value: 0.53
+          time: 0.20833284
+          value: 0.59132504
           inSlope: 1
           outSlope: 1
           tangentMode: 0
@@ -3331,8 +3331,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.5
-          value: 0.8
+          time: 0.30000305
+          value: 0.81887513
           inSlope: 1
           outSlope: 1
           tangentMode: 0
@@ -3401,7 +3401,7 @@ MonoBehaviour:
       _downshiftRPM: 1400
       _targetDownshiftRPM: 0
       _targetUpshiftRPM: 0
-      _transmissionType: 2
+      _transmissionType: 1
       _upshiftRPM: 2800
       clutchEngaged: 0
       externalShiftChecksValid: 1
@@ -3789,8 +3789,8 @@ MonoBehaviour:
     steeringWheelTurnRatio: 5
   enginePosition: {x: 0, y: 0.4, z: 1.5}
   exhaustPosition: {x: 0, y: 0.1, z: -2}
-  lateralSlipThreshold: 1.5
-  longitudinalSlipThreshold: 2
+  lateralSlipThreshold: 3
+  longitudinalSlipThreshold: 3
   stateSettings: {fileID: 11400000, guid: 3404c49a4170ad94e87f0e8545b86758, type: 2}
   transmissionPosition: {x: 0, y: 0.2, z: 0.2}
   freezeWhenAsleep: 1

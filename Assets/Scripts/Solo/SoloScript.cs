@@ -129,7 +129,7 @@ public class SoloScript : MonoBehaviour
             Time.timeScale = 0f;
         }
         
-        if (passedCheckpoint >= Checkpoint.Length + 1 && LastCheckpoint.PassedLastCheckpointPlayer && _isOnGame)
+        if (passedCheckpoint >= Checkpoint.Length && LastCheckpoint.PassedLastCheckpointPlayer && _isOnGame)
         {
             Win();
             Time.timeScale = 0f;

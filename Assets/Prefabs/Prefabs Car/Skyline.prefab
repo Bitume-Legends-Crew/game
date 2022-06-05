@@ -2520,7 +2520,7 @@ MonoBehaviour:
       OnStop:
         m_PersistentCalls:
           m_Calls: []
-      flyingStartEnabled: 0
+      flyingStartEnabled: 1
       powerCurve:
         serializedVersion: 2
         m_Curve:

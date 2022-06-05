@@ -23,16 +23,14 @@ public class CountDown : MonoBehaviour
     {
         while (CountDownTimer > 0)
         {
-            SceneManagement.SetActive(false);
-            if (CountDownTimer == 1)
-                SceneManagement.SetActive(true);
-            
+            SceneManagement.SetActive(false);         
             countDownDisplay.text = CountDownTimer.ToString();
             yield return new WaitForSeconds(1f);
             CountDownTimer--;
             
         }
         
+        SceneManagement.SetActive(true);
         countDownDisplay.text = "GO";
         yield return new WaitForSeconds(1f);
         countDownDisplay.gameObject.SetActive(false);
