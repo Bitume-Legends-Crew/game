@@ -17,5 +17,6 @@ public class MusicVolumeHandler : MonoBehaviour
     void Update()
     {
         mixer.SetFloat("MusicVolume", SaveManager.instance.volumeMusic );
+        SaveManager.instance.Save();
     }
 }
