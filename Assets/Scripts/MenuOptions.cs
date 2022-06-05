@@ -7,18 +7,6 @@ using UnityEngine.UI;
 
 public class MenuOptions : MonoBehaviour
 {
-    // // Start is called before the first frame update
-    // void Start()
-    // {
-    //     
-    // }
-    //
-    // // Update is called once per frame
-    // void Update()
-    // {
-    //     
-    // }
-
     public GameObject panelOptions;
     public AudioMixer audioMixer;
     private Resolution[] _resolutions;
@@ -38,10 +26,11 @@ public class MenuOptions : MonoBehaviour
         {
             options.Add(_resolutions[i].width + "x" + _resolutions[i].height);
 
-            if (_resolutions[i].width == Screen.currentResolution.width 
+            if (_resolutions[i].width == Screen.currentResolution.width
                 && _resolutions[i].height == Screen.currentResolution.height)
                 currentResolutionIndex = i;
         }
+
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
@@ -56,30 +45,19 @@ public class MenuOptions : MonoBehaviour
     }
 
     public void BackToMenu()
-    {
-        panelOptions.SetActive(false);
-    }
+        => panelOptions.SetActive(false);
 
-    public void SetVolumeMusic()
-    {
-        //audioMixer.SetFloat("MusicVolume", volume);
-        SaveManager.instance.volumeMusic = Mathf.Log10(sliderMusic.value) * 40;
-    }
-    public void SetVolumeCars()
-    {
-        //audioMixer.SetFloat("MusicVolume", volume);
-        SaveManager.instance.volumeMusic = Mathf.Log10(sliderFX.value) * 40;
-    }
+    public void SetVolumeMusic(float volume)
+        => SaveManager.instance.volumeMusic = Mathf.Log10(volume) * 40;
+
+    public void SetVolumeCars(float volume)
+        => SaveManager.instance.volumeCars = Mathf.Log10(volume) * 40;
 
     public void SetQuality(int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-    }
+        => QualitySettings.SetQualityLevel(qualityIndex);
 
     public void SetFullScreen(bool isFullScreen)
-    {
-        Screen.fullScreen = isFullScreen;
-    }
+        => Screen.fullScreen = isFullScreen;
 
     public void SetResolution(int resolutionIndex)
     {
