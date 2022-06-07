@@ -22,7 +22,7 @@ public class PlayerMenu : MonoBehaviour
 
     void Start()
     {
-        levelText.text = LevelSystem.instance.Level.ToString();
+        levelText.text = (LevelSystem.instance.Level + 1).ToString();
         experienceText.text = LevelSystem.instance.Experience.ToString();
     }
 
