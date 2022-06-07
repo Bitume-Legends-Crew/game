@@ -16,10 +16,6 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: d7d54ef6d134df64f9a8caf36fe545be
-    name: MyExposedParam 6
-  - guid: c4b9c3680f330a6428d0445401961bca
-    name: MyExposedParam 1
   - guid: 50448f97611ab7e4d89664f1e0a4b77f
     name: engineDistortion
   - guid: 01f79c1bcfb25c04abd56066a938646c
@@ -28,16 +24,6 @@ AudioMixerController:
     name: lowPassQ
   - guid: 47207a01ed556ae4f9aaa3e11edf5e92
     name: lowPassFrequency
-  - guid: 98beb3df8c74fd943b408e1864f25f78
-    name: MyExposedParam 7
-  - guid: 0c67aea2bc1948342a910976a02fabe6
-    name: MyExposedParam 3
-  - guid: e19432e8cd27f0f44815ff4d0cf296d0
-    name: MyExposedParam 5
-  - guid: aa450f5b38cb7f341a7fbbee0728db17
-    name: MyExposedParam 2
-  - guid: 4def972ee4e15e74c9ccfbcb46c929d4
-    name: MyExposedParam 4
   m_AudioMixerGroupViews:
   - guids:
     - 060b23f909a895546aa14c88a4b4c58f

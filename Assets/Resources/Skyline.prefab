@@ -1722,7 +1722,7 @@ MonoBehaviour:
       revLimiterActive: 0
       revLimiterCutoffDuration: 0.02
       revLimiterEnabled: 1
-      revLimiterRPM: 7000
+      revLimiterRPM: 5800
       shiftSignal: 0
       slipTorque: 9999
       stallingEnabled: 1
@@ -2040,7 +2040,7 @@ MonoBehaviour:
         name: 
       audioMixerGroup: {fileID: 0}
       basePitch: 1
-      baseVolume: 0.1
+      baseVolume: 0.3
       clips:
       - {fileID: 8300000, guid: 483f13d9efbded34fbbdf89ee7d949d0, type: 3}
       container: {fileID: 0}
