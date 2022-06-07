@@ -20,21 +20,13 @@ public class MultiScript : MonoBehaviour
     public GameObject ButtonMenu;
     public GameObject ButtonBack;
 
-    public GameObject[] player;
-    
     private void Start()
     {
-        
-        player = GameObject.FindGameObjectsWithTag("Vehicle");
-        if (PhotonNetwork.CurrentRoom.Players.Count == player.Length)
-        {
-            CountDown.CountDownTimer = 5;
-            passedCheckpoint = 0;
-            Destroy(MusicHandler.musicObj[0]);
-            LastCheckpoint.PassedLastCheckpointPlayer = false;
-            LastCheckpoint.PassedLastCheckpointPlayer = false;
-        }
-        
+        CountDown.CountDownTimer = 5;
+        passedCheckpoint = 0;
+        Destroy(MusicHandler.musicObj[0]);
+        LastCheckpoint.PassedLastCheckpointPlayer = false;
+        LastCheckpoint.PassedLastCheckpointPlayer = false;
     }
 
     public void Menu()
@@ -46,16 +38,21 @@ public class MultiScript : MonoBehaviour
         Start();
     }
     
-    public void Win(PhotonView view)
+    public void Win()
     {
         // timeAudio.Play();
+        foreach (PhotonView photonView in FindObjectsOfType<PhotonView>())
+        {
+            if (photonView != photonView.IsMine)
+                photonView.RPC("Loose()", RpcTarget.Others);
+                
+        }
         passedCheckpoint = 0;
         TextWin.SetActive(true);
         BackGroundWin.SetActive(true);
         ButtonRetry.SetActive(true);
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
-        view.RPC("Loose", RpcTarget.Others);
         Time.timeScale = 0f;
         LevelSystem.instance.AddExperience(true,2f);
         
@@ -82,26 +79,17 @@ public class MultiScript : MonoBehaviour
 
     private void Update()
     {
-        if (PhotonNetwork.CurrentRoom.Players.Count != player.Length) // If not every players have join the game
-        {
-            Start();
-        }
-        
+
+
         if (CountDown.CountDownTimer == 0)
         {
             Debug.Log(passedCheckpoint);
 
-            if (LastCheckpoint.PassedLastCheckpointPlayer && passedCheckpoint >= Checkpoint.Length)
+            if (LastCheckpoint.PassedLastCheckpointPlayer)
             {
-                for(int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
-                {
-                    PhotonView ListView = GetComponent<PhotonView>();
-                    if (ListView.IsMine);
-                        Win(ListView);
-                }
+                Win();
             }
-            
-
         }
     }
 }
+
