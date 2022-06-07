@@ -1923,7 +1923,7 @@ MonoBehaviour:
       isStalling: 0
       lossTorque: 0
       maxLossTorque: 300
-      maxPower: 100
+      maxPower: 85
       maxRPM: 5000
       minRPM: -50
       OnRevLimiter:

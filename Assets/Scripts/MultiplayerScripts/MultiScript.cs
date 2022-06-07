@@ -1,4 +1,7 @@
+using System.Collections.Generic;
 using Photon.Pun;
+using Photon.Realtime;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,7 +46,7 @@ public class MultiScript : MonoBehaviour
         Start();
     }
     
-    public void Win()
+    public void Win(PhotonView view)
     {
         // timeAudio.Play();
         passedCheckpoint = 0;
@@ -52,12 +55,14 @@ public class MultiScript : MonoBehaviour
         ButtonRetry.SetActive(true);
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
+        view.RPC("Loose", RpcTarget.Others);
         Time.timeScale = 0f;
         LevelSystem.instance.AddExperience(true,2f);
         
         //XP EARNING
     }
 
+    [PunRPC]
     public void Loose()
     {
         // timeAudio.Play();
@@ -86,10 +91,16 @@ public class MultiScript : MonoBehaviour
         {
             Debug.Log(passedCheckpoint);
 
-            if (LastCheckpoint.PassedLastCheckpointPlayer && passedCheckpoint == Checkpoint.Length)
+            if (LastCheckpoint.PassedLastCheckpointPlayer && passedCheckpoint >= Checkpoint.Length)
             {
-                Win();
+                for(int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+                {
+                    PhotonView ListView = GetComponent<PhotonView>();
+                    if (ListView.IsMine);
+                        Win(ListView);
+                }
             }
+            
 
         }
     }
