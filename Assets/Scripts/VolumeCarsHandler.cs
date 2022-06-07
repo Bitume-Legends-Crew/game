@@ -15,6 +15,7 @@ public class VolumeCarsHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mixer.SetFloat("VehicleAudioMixer", SaveManager.instance.volumeCars);
+        mixer.SetFloat("VolumeCars", SaveManager.instance.volumeCars);
+        SaveManager.instance.Save();
     }
 }

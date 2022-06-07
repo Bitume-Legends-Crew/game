@@ -51,7 +51,7 @@ public class MenuOptions : MonoBehaviour
         => SaveManager.instance.volumeMusic = Mathf.Log10(volume) * 40;
 
     public void SetVolumeCars(float volume)
-        => SaveManager.instance.volumeCars = Mathf.Log10(volume) * 40;
+        => SaveManager.instance.volumeCars = 5 + Mathf.Log10(volume) * 40;
 
     public void SetQuality(int qualityIndex)
         => QualitySettings.SetQualityLevel(qualityIndex);
