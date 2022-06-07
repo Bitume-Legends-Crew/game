@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Annotations;
 using Photon.Pun;
 using UnityEngine;
 
@@ -22,6 +19,5 @@ public class LastCheckpointMulti : MonoBehaviour
         }
 
         pv = other.GetComponent<PhotonView>();
-        Debug.Log(pv.ToString());
     }
 }

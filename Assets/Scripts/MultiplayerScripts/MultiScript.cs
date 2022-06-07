@@ -75,7 +75,7 @@ public class MultiScript : MonoBehaviour
         if (finished)
             return;
 
-        if (LastCheckpointMulti.PassedLastCheckpointPlayer)
+        if (LastCheckpointMulti.PassedLastCheckpointPlayer &&  passedCheckpoint >= 5)
         {
             if (LastCheckpointMulti.pv.IsMine)
                     Win(LastCheckpointMulti.pv);
