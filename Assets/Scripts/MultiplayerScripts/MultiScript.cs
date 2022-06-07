@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using Photon.Pun;
-using Photon.Realtime;
-using Unity.VisualScripting;
+using Photon.Pun.UtilityScripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +7,7 @@ public class MultiScript : MonoBehaviour
 {
     public static int passedCheckpoint;
     public BoxCollider[] Checkpoint;
+    public bool finished = false;
     // public AudioSource timeAudio;
     // public GameObject Car;
 
@@ -25,28 +24,26 @@ public class MultiScript : MonoBehaviour
         CountDown.CountDownTimer = 5;
         passedCheckpoint = 0;
         Destroy(MusicHandler.musicObj[0]);
-        LastCheckpoint.PassedLastCheckpointPlayer = false;
-        LastCheckpoint.PassedLastCheckpointPlayer = false;
+        LastCheckpointMulti.PassedLastCheckpointPlayer = false;
     }
 
     public void Menu()
     {
+        Time.timeScale = 1f;
         PhotonNetwork.LeaveRoom();
         PhotonNetwork.Disconnect();
-        SceneManager.LoadScene("Scenes/Menu");
+        SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
         Start();
     }
     
-    public void Win()
+    public void Win(PhotonView view)
     {
-        // timeAudio.Play();
-        foreach (PhotonView photonView in FindObjectsOfType<PhotonView>())
-        {
-            if (photonView != photonView.IsMine)
-                photonView.RPC("Loose()", RpcTarget.Others);
-                
-        }
+        // timeAudio.Play()
+        finished = true;
+        Debug.Log("WIN");
+        Debug.Log(view.ToString());
+        view.RPC("Loose()", RpcTarget.Others, "view");
         passedCheckpoint = 0;
         TextWin.SetActive(true);
         BackGroundWin.SetActive(true);
@@ -55,13 +52,12 @@ public class MultiScript : MonoBehaviour
         ButtonBack.SetActive(false);
         Time.timeScale = 0f;
         LevelSystem.instance.AddExperience(true,2f);
-        
-        //XP EARNING
     }
 
     [PunRPC]
-    public void Loose()
+    public void Loose(PhotonView view)
     {
+       finished = true;
         // timeAudio.Play();
         passedCheckpoint = 0;
         TextLoose.SetActive(true);
@@ -70,24 +66,22 @@ public class MultiScript : MonoBehaviour
         ButtonMenu.SetActive(true);
         ButtonBack.SetActive(false);
         Time.timeScale = 0f;
-        LevelSystem.instance.AddExperience(false,2f);
-        
-        //XP EARNING
+        LevelSystem.instance.AddExperience(false, 2f);
     }
 
     
-
     private void Update()
     {
+        if (finished)
+            return;
 
-
-        if (CountDown.CountDownTimer == 0)
+        if (LastCheckpointMulti.PassedLastCheckpointPlayer)
         {
-            Debug.Log(passedCheckpoint);
-
-            if (LastCheckpoint.PassedLastCheckpointPlayer)
+            if (LastCheckpointMulti.pv.IsMine)
+                    Win(LastCheckpointMulti.pv);
+            else
             {
-                Win();
+                Loose(LastCheckpointMulti.pv);
             }
         }
     }
