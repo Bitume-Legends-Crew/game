@@ -1722,7 +1722,7 @@ MonoBehaviour:
       revLimiterActive: 0
       revLimiterCutoffDuration: 0.02
       revLimiterEnabled: 1
-      revLimiterRPM: 5800
+      revLimiterRPM: 7500
       shiftSignal: 0
       slipTorque: 9999
       stallingEnabled: 1
