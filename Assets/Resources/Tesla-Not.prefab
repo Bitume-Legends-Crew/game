@@ -5453,7 +5453,6 @@ GameObject:
   - component: {fileID: 6461237093400085595}
   - component: {fileID: 6353551826890832944}
   - component: {fileID: 7362923288182294706}
-  - component: {fileID: -7708892789197236795}
   m_Layer: 2
   m_Name: Tesla-Not
   m_TagString: Vehicle
@@ -6509,21 +6508,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &-7708892789197236795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2964412958421897838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fa430f26ec86e429998f784e11035a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TxtSpeed: {fileID: 7226660744172998291, guid: 1a6dcb147f45a43b5b9923ad5b4a4b58, type: 3}
-  isMP: 1
-  Canvas: {fileID: 7226660744172998288, guid: 1a6dcb147f45a43b5b9923ad5b4a4b58, type: 3}
 --- !u!1 &2964465955571662650
 GameObject:
   m_ObjectHideFlags: 0

@@ -1471,11 +1471,10 @@ GameObject:
   - component: {fileID: 3779043704710463254}
   - component: {fileID: 3779043704710463255}
   - component: {fileID: 3779043704710463248}
-  - component: {fileID: 3278419330546033516}
-  - component: {fileID: 4849129283404006043}
-  - component: {fileID: 1719562075332528109}
-  - component: {fileID: 5922989516741727762}
-  - component: {fileID: 4060801009766514402}
+  - component: {fileID: 5766945468284383113}
+  - component: {fileID: 7880216042354389867}
+  - component: {fileID: -427552772508462094}
+  - component: {fileID: 462232348926200867}
   m_Layer: 2
   m_Name: Punto-Chantier
   m_TagString: Vehicle
@@ -2418,7 +2417,53 @@ MonoBehaviour:
   updateLODs: 1
   useCameraMainForLOD: 1
   LODCamera: {fileID: 0}
---- !u!114 &3278419330546033516
+--- !u!114 &5766945468284383113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757351938416287305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &7880216042354389867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757351938416287305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
+--- !u!114 &-427552772508462094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3757351938416287305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ae0aed68fd6ad46a8d01030b4ba3be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendRate: 128
+  serializationRate: 128
+--- !u!114 &462232348926200867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2436,74 +2481,10 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents:
-  - {fileID: 4849129283404006043}
-  - {fileID: 1719562075332528109}
-  - {fileID: 5922989516741727762}
+  ObservedComponents: []
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &4849129283404006043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3757351938416287305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
---- !u!114 &1719562075332528109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3757351938416287305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
---- !u!114 &5922989516741727762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3757351938416287305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ae0aed68fd6ad46a8d01030b4ba3be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sendRate: 25
-  serializationRate: 25
---- !u!114 &4060801009766514402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3757351938416287305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fa430f26ec86e429998f784e11035a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TxtSpeed: {fileID: 7226660744172998291, guid: 1a6dcb147f45a43b5b9923ad5b4a4b58, type: 3}
-  isMP: 1
-  Canvas: {fileID: 7226660744172998288, guid: 1a6dcb147f45a43b5b9923ad5b4a4b58, type: 3}
 --- !u!1 &3757394470595605709
 GameObject:
   m_ObjectHideFlags: 0

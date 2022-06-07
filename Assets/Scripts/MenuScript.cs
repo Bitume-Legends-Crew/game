@@ -72,7 +72,7 @@ public class MenuScript : MonoBehaviour
 
     private void Start()
     {
-        levelText.text = "Level " + LevelSystem.instance.Level;
+        levelText.text = "Level " + (LevelSystem.instance.Level + 1);
         levelUp.SetActive(false);
         optionMenu.SetActive(false);
     }
