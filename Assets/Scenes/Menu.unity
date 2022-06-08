@@ -1400,9 +1400,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37d3b7d54cdb9546a9d8fe0fd42a734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentCar: 0
-  currentLevel: 0
-  currentExp: 0
+  currentCar: 2
+  currentLevel: 3
+  currentExp: 500
   volumeMusic: 0.01
   volumeCars: 0.01
 --- !u!4 &348694703

@@ -22,6 +22,7 @@ public class SaveManager : MonoBehaviour
             instance = this;
         
         DontDestroyOnLoad(gameObject);
+        Save();
         Load();
     }
 
